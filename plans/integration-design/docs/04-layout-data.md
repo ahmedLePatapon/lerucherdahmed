@@ -455,6 +455,14 @@ console.log(products.length); // 6
 
 - [ ] Pas d'erreurs dans la console
 
+## Step 4 Verification Results
+
+- [x] Le Header s'affiche en haut de toutes les pages (importé dans `app/layout.tsx`)
+- [x] Le Footer s'affiche en bas de toutes les pages (importé dans `app/layout.tsx`)
+- [x] La navigation peut être importée et utilisée (voir `lib/data`)
+- [x] Les données peuvent être importées sans erreur (`import { products, testimonials, terroirs } from "@/lib/data"`)
+- [x] Pas d'erreurs de build (dev/build lancé avec succès)
+
 ---
 
 ## Step 4 STOP & COMMIT

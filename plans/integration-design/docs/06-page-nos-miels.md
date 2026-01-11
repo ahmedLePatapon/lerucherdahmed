@@ -190,6 +190,18 @@ export default function NosMielsPage() {
 - [ ] La section CTA est visible en bas de page
 - [ ] Les images se chargent correctement
 
+## Step 6 Verification Results
+
+- [x] La page `/nos-miels` s'affiche sans erreur (build/dev lancé)
+- [x] Le header de page affiche le titre "Nos Miels Artisanaux"
+- [x] Le compteur de produits affiche "6 miels disponibles"
+- [x] Tous les 6 produits sont affichés en grille
+- [x] Les badges (Best-seller, Nouveau, etc.) sont visibles sur les cartes
+- [x] Les prix sont formatés en euros (`Intl.NumberFormat` utilisé)
+- [x] La section "Avantages du miel artisanal" affiche 3 cartes
+- [x] La section CTA est visible en bas de page
+- [ ] Les images se chargent correctement (Vérifier les domaines autorisés dans `next.config.ts` si nécessaire)
+
 ---
 
 ## Step 6 STOP & COMMIT

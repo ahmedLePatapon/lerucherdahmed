@@ -107,7 +107,7 @@ export const products: Product[] = [
             "Un miel blanc à la texture fine et crémeuse, récolté sur les vastes champs dorés de colza. Son goût délicat et sa consistance en font un excellent ingrédient pour la cuisine et la pâtisserie.",
         shortDescription:
             "Un miel blanc à la texture fine, récolté sur les vastes champs dorés.",
-        image: "https://images.unsplash.com/photo-1550411294-098a08f14d1a?w=800&q=80",
+        image: "https://picsum.photos/seed/miel-colza/800/600",
         rating: 4.6,
         weight: "500g",
         harvest: "Mai",
@@ -126,7 +126,7 @@ export const products: Product[] = [
             "Le reflet de la biodiversité locale. Un mélange naturel des nectars de saison, offrant un bouquet de saveurs unique qui varie d'une récolte à l'autre.",
         shortDescription:
             "Le reflet de la biodiversité locale. Un mélange naturel des nectars de saison.",
-        image: "https://images.unsplash.com/photo-1601063476271-1d1b2b1e0e5f?w=800&q=80",
+        image: "https://picsum.photos/seed/miel-toutes-fleurs/800/600",
         rating: 4.8,
         weight: "500g",
         harvest: "Juin",

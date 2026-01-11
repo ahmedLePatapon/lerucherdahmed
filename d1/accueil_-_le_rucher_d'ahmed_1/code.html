@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Accueil - Le Rucher d'Ahmed</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#FFD400", // Electric Yellow
+                        "primary-dark": "#e6be00",
+                        "accent": "#2EC4B6", // Soft Turquoise
+                        "background-light": "#f8f8f5", 
+                        "background-dark": "#2E1A47", // Deep Violet requested
+                        "surface-dark": "#3B2656", // Slightly lighter violet for cards
+                        "surface-darker": "#25143a", // Darker violet for distinct sections
+                        "text-light": "#FFFFFF",
+                        "text-muted": "#d4c5e3", // Light violet-grey for muted text
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.375rem", 
+                        "lg": "0.5rem", 
+                        "xl": "1rem", 
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#181710] dark:text-text-light overflow-x-hidden transition-colors duration-300">
+<!-- Navbar -->
+<div class="fixed top-0 left-0 right-0 z-50 w-full bg-background-dark/90 backdrop-blur-md border-b border-surface-dark">
+<div class="max-w-7xl mx-auto px-4 lg:px-8">
+<header class="flex items-center justify-between h-20">
+<div class="flex items-center gap-3 text-white">
+<div class="w-10 h-10 flex items-center justify-center bg-primary rounded-lg text-background-dark">
+<span class="material-symbols-outlined text-2xl">hive</span>
+</div>
+<h2 class="text-white text-xl font-bold tracking-tight">Le Rucher d'Ahmed</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end items-center gap-8">
+<nav class="flex items-center gap-8">
+<a class="text-white hover:text-primary transition-colors text-sm font-semibold" href="#">Accueil</a>
+<a class="text-text-muted hover:text-primary transition-colors text-sm font-semibold" href="#">Notre Miel</a>
+<a class="text-text-muted hover:text-primary transition-colors text-sm font-semibold" href="#">À propos</a>
+<a class="text-text-muted hover:text-primary transition-colors text-sm font-semibold" href="#">Contact</a>
+</nav>
+<button class="flex items-center justify-center h-10 px-6 bg-primary hover:bg-primary-dark text-background-dark text-sm font-bold rounded-lg transition-all transform hover:scale-105 shadow-[0_0_15px_rgba(255,212,0,0.3)]">
+                        Commander
+                    </button>
+</div>
+<!-- Mobile Menu Icon -->
+<button class="md:hidden text-white p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+</div>
+</div>
+<!-- Hero Section -->
+<div class="relative min-h-screen flex items-center pt-20">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-background-dark/90 via-background-dark/70 to-background-dark/30 z-10"></div>
+<div class="w-full h-full bg-cover bg-center" data-alt="Close up of golden honey dripping from honeycomb with bees" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuACb4vwKahhYOUUk8f5kL4WWdsi8cT7t90MFDnws2XpbxEpWe5oVY4PV4n2PxhpdqpOg6s0NRHOdCjXumx3C0k5JXKnNdCg-8_d2xWqbdqpnq1RRJJA9kqyDFsAzf0D7IOudcWQKX2Td69lSx-tRIB8fH6WINu3m7A4e1xxF5uAsX_odJ4X8tPp4ZP2pBEVfwXamtIaZ5MurjV4hSuqeUDBR2BrWsw0XE5pvmt8wePODo29j-dt_oCDwySISPM78HI2vgbul_J5xew');">
+</div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 w-full py-20">
+<div class="max-w-2xl flex flex-col gap-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-dark border border-surface-dark/50 w-fit backdrop-blur-sm">
+<span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+<span class="text-accent text-xs font-bold uppercase tracking-wide">Nouvelle récolte disponible</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-extrabold text-white leading-[1.1] tracking-tight">
+                    L'Or de la Nature, <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-[#ffec88]">Directement de la Ruche</span>
+</h1>
+<p class="text-lg md:text-xl text-text-muted max-w-xl leading-relaxed">
+                    Miel artisanal 100% local produit par Le Rucher d'Ahmed. Découvrez l'authenticité de nos saveurs et soutenez une apiculture durable.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="flex items-center justify-center h-14 px-8 bg-primary hover:bg-primary-dark text-background-dark text-base font-bold rounded-lg transition-all shadow-lg shadow-primary/20 hover:shadow-primary/40 group">
+<span class="mr-2">Commander notre Miel</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform text-xl">arrow_forward</span>
+</button>
+<button class="flex items-center justify-center h-14 px-8 bg-transparent border-2 border-white/20 hover:border-primary text-white hover:text-primary text-base font-bold rounded-lg transition-colors backdrop-blur-sm">
+                        Nous Contacter
+                    </button>
+</div>
+<div class="flex items-center gap-6 pt-8 text-sm font-medium text-text-muted">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-accent text-xl">check_circle</span>
+<span>100% Naturel</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-accent text-xl">check_circle</span>
+<span>Production Locale</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Features / Values Section -->
+<section class="py-24 bg-surface-darker border-y border-surface-dark">
+<div class="max-w-7xl mx-auto px-4 lg:px-8">
+<div class="flex flex-col md:flex-row gap-12 md:gap-20">
+<div class="md:w-1/3 space-y-6">
+<h2 class="text-3xl md:text-4xl font-bold text-white">Pourquoi choisir notre miel ?</h2>
+<p class="text-text-muted text-lg">
+                        Une apiculture respectueuse des abeilles et de l'environnement pour un produit d'exception, récolté avec patience et passion.
+                    </p>
+<a class="inline-flex items-center text-primary font-bold hover:underline decoration-2 underline-offset-4" href="#">
+                        En savoir plus sur notre méthode
+                        <span class="material-symbols-outlined ml-1 text-lg">arrow_right_alt</span>
+</a>
+</div>
+<div class="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Feature 1 -->
+<div class="bg-surface-dark p-6 rounded-xl border border-white/5 hover:border-primary/30 transition-colors group">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-background-dark transition-colors text-primary">
+<span class="material-symbols-outlined text-2xl">eco</span>
+</div>
+<h3 class="text-white text-lg font-bold mb-2">100% Naturel</h3>
+<p class="text-text-muted text-sm leading-relaxed">Aucun ajout, aucun traitement chimique, juste le pur nectar des fleurs transformé par nos abeilles.</p>
+</div>
+<!-- Feature 2 -->
+<div class="bg-surface-dark p-6 rounded-xl border border-white/5 hover:border-primary/30 transition-colors group">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-background-dark transition-colors text-primary">
+<span class="material-symbols-outlined text-2xl">location_on</span>
+</div>
+<h3 class="text-white text-lg font-bold mb-2">Production Locale</h3>
+<p class="text-text-muted text-sm leading-relaxed">Récolté et mis en pot directement au rucher, garantissant une fraîcheur et une traçabilité absolues.</p>
+</div>
+<!-- Feature 3 -->
+<div class="bg-surface-dark p-6 rounded-xl border border-white/5 hover:border-primary/30 transition-colors group">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-background-dark transition-colors text-primary">
+<span class="material-symbols-outlined text-2xl">volunteer_activism</span>
+</div>
+<h3 class="text-white text-lg font-bold mb-2">Apiculture Durable</h3>
+<p class="text-text-muted text-sm leading-relaxed">Nous protégeons la biodiversité et nos colonies avant tout, en respectant leur cycle naturel.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Products Section -->
+<section class="py-24 bg-background-dark relative overflow-hidden">
+<!-- Abstract Decoration -->
+<div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+<div class="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="text-accent font-bold uppercase tracking-wider text-sm mb-2 block">Nos Trésors</span>
+<h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Découvrez nos miels d'exception</h2>
+<p class="text-text-muted text-lg">Chaque pot raconte l'histoire d'une saison et d'une floraison unique.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Product Card 1 -->
+<div class="group bg-surface-dark rounded-2xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-1">
+<div class="aspect-[4/3] bg-surface-darker relative overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Golden Lavender Honey Jar on a wooden table with lavender flowers" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCYkPLxTy8_0jXmFoYa53BEm3W3QISNDYkTf8y20zGEbK7LPL9h8Njm1EHzfHyinaY0lLM8OmyK1oQPQUOht4s6yw4tYre-5DX-aeuYBQ1ZS9YdFMJ2RFdR2A4Dc9kMk26FFpJSuNtUiYD0zcR2zojYdiz6hTAlo1LgtoYTueH5SfXQHyeNoGgqKxiBjKd1KnmYDhm3BLo40p0SP2L3lvgnp93Yq7Py0WwutaJ6yGok8mAngXk1caWgYrDwHxolQb8X7q3et2Dxt9c');">
+</div>
+<div class="absolute top-4 left-4 bg-primary text-background-dark text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-sm">
+                            Best-seller
+                        </div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Miel de Lavande</h3>
+<div class="flex items-center gap-1 text-primary text-sm">
+<span class="material-symbols-outlined text-base fill-current">star</span>
+<span class="font-bold">4.9</span>
+</div>
+</div>
+<p class="text-text-muted text-sm mb-6 line-clamp-2">Un miel crémeux aux notes florales délicates, récolté sur les plateaux ensoleillés de Provence.</p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex flex-col">
+<span class="text-xs text-text-muted">Pot de 500g</span>
+<span class="text-2xl font-bold text-white">12,00 €</span>
+</div>
+<button class="bg-white/10 hover:bg-primary hover:text-background-dark text-white p-3 rounded-xl transition-all duration-200">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group bg-surface-dark rounded-2xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-1">
+<div class="aspect-[4/3] bg-surface-darker relative overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Clear Acacia Honey Jar with sunlight passing through" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuApHaDHy9FYFkgLFT3TUuPGN2K1t0S6DpX8OPQ6cEx7S7-2ClONY-zeI6GB15lhh7HSyHWFQrwEmjHtVNs4kFiWjKSjKbnatWE-Aenf5_WOl5OXHOVKcYiuMmQfuC1LWi6HCrIdqOVzOzwWrnHFxRmTblNKe-7x7QiwJCx-C5JcKsYJIPQ9DNdVvN-sRvDj00xIdcb6oU0cJ6-EyY_AS3klaMscuV-sGdiIpJVrSsigSeDaLpmi_kbT3_WrcgE9KHPYzUVFI6Xnyoo');">
+</div>
+<div class="absolute top-4 left-4 bg-accent text-background-dark text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-sm">
+                            Douceur
+                        </div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Miel d'Acacia</h3>
+<div class="flex items-center gap-1 text-primary text-sm">
+<span class="material-symbols-outlined text-base fill-current">star</span>
+<span class="font-bold">4.8</span>
+</div>
+</div>
+<p class="text-text-muted text-sm mb-6 line-clamp-2">Limpide et liquide, ce miel est apprécié pour sa grande douceur et son index glycémique modéré.</p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex flex-col">
+<span class="text-xs text-text-muted">Pot de 500g</span>
+<span class="text-2xl font-bold text-white">14,00 €</span>
+</div>
+<button class="bg-white/10 hover:bg-primary hover:text-background-dark text-white p-3 rounded-xl transition-all duration-200">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group bg-surface-dark rounded-2xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-1">
+<div class="aspect-[4/3] bg-surface-darker relative overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Dark Chestnut Honey Jar with rich amber color" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDR4tGQbBo4h9eAnmrFessczw06yz7qKiqB8NiVoZJVhdNG2VQToAIPEldzS-By2knaFU2Y308L8Juov_IbTpz01qRrY0-Ia-6JqftWaukb2tbAMwq_kZHcJXRO9t5cG_PREit3v7uuTYuv1vM144Gkoizw-fCl46ZHKDqZS7-LyN6peu_8TNczQBgtvXmLeY1TpRWy8BT9-jsvmnvajclVGC_bxhdqdE4NkQdH2--8Bf8EQ-HJHd0pos6LRewwDPDMqJAACET87CQ');">
+</div>
+<div class="absolute top-4 left-4 bg-surface-darker text-white border border-white/20 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-sm">
+                            Intense
+                        </div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Miel de Châtaignier</h3>
+<div class="flex items-center gap-1 text-primary text-sm">
+<span class="material-symbols-outlined text-base fill-current">star</span>
+<span class="font-bold">5.0</span>
+</div>
+</div>
+<p class="text-text-muted text-sm mb-6 line-clamp-2">Un miel de caractère, corsé et boisé, parfait pour les amateurs de saveurs puissantes et authentiques.</p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex flex-col">
+<span class="text-xs text-text-muted">Pot de 500g</span>
+<span class="text-2xl font-bold text-white">11,00 €</span>
+</div>
+<button class="bg-white/10 hover:bg-primary hover:text-background-dark text-white p-3 rounded-xl transition-all duration-200">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 text-center">
+<button class="inline-flex items-center justify-center h-12 px-8 border border-white/20 hover:border-primary text-white hover:text-primary font-bold rounded-lg transition-colors">
+                    Voir toute la boutique
+                </button>
+</div>
+</div>
+</section>
+<!-- Story / About Section -->
+<section class="py-24 bg-surface-darker relative">
+<div class="max-w-7xl mx-auto px-4 lg:px-8">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="relative order-2 lg:order-1">
+<div class="absolute -inset-4 bg-primary rounded-2xl rotate-3 opacity-20 blur-lg"></div>
+<div class="relative aspect-square lg:aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Ahmed the beekeeper inspecting a hive frame with bees in sunlight" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCcvNGgz0D5l81wOQgG8d8XYeClsZHJD4cqMifsiwerO4XpcGXo_XMg9cpx1HwLbBkK2F5QtLAQ6Re-9DUu0ZXrPTjIHUYjpp1tER9BnyXcbB_71ISsYhnUjr6f4Ych3Umny-kcF03LxQFOc0GZZPGeL5W1kDRVODq0i1IzeeQUI0n1pb92RTBim9osse_EfznKsL5Vz7ZuUCjzpiRLz82KaIo8xtow9ncy6MCxlikk5cRqPCoBQagLUmelZmc48aRlPJa1VDrx8uc');">
+</div>
+<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-8">
+<p class="text-white text-lg font-medium">"Le respect de l'abeille est la clé d'un miel d'exception."</p>
+<p class="text-primary mt-2 font-bold">— Ahmed</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6 order-1 lg:order-2">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-dark border border-surface-dark/50 w-fit">
+<span class="text-accent text-xs font-bold uppercase tracking-wide">Notre Histoire</span>
+</div>
+<h2 class="text-4xl lg:text-5xl font-bold text-white leading-tight">
+                        L'histoire d'une passion <br/>
+<span class="text-primary">transmise avec amour</span>
+</h2>
+<p class="text-text-muted text-lg leading-relaxed">
+                        Depuis plus de 10 ans, Ahmed prend soin de ses ruches avec passion. Loin de l'industrie agroalimentaire, nous avons fait le choix d'une production à taille humaine.
+                    </p>
+<p class="text-text-muted text-lg leading-relaxed">
+                        Chaque geste est pensé pour le bien-être de la colonie. Nous ne récoltons que le surplus de miel, laissant aux abeilles tout ce dont elles ont besoin pour passer l'hiver sereinement.
+                    </p>
+<div class="pt-4">
+<button class="flex items-center gap-3 text-white font-bold hover:text-primary transition-colors group w-fit">
+<span class="border-b-2 border-primary pb-1">En savoir plus sur Ahmed</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials / Social Proof -->
+<section class="py-24 bg-background-dark border-t border-surface-dark">
+<div class="max-w-7xl mx-auto px-4 lg:px-8">
+<div class="flex flex-col items-center mb-16">
+<span class="text-primary font-bold text-3xl mb-2 flex gap-1">
+<span class="material-symbols-outlined fill-current">star</span>
+<span class="material-symbols-outlined fill-current">star</span>
+<span class="material-symbols-outlined fill-current">star</span>
+<span class="material-symbols-outlined fill-current">star</span>
+<span class="material-symbols-outlined fill-current">star</span>
+</span>
+<h2 class="text-3xl font-bold text-white text-center">Ce que nos clients disent</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Review 1 -->
+<div class="bg-surface-dark p-8 rounded-2xl relative">
+<span class="material-symbols-outlined text-6xl text-white/5 absolute top-4 right-4">format_quote</span>
+<p class="text-text-muted mb-6 relative z-10 italic">"Un miel incroyable. J'ai commandé le miel de châtaignier et le goût est incomparable avec ce qu'on trouve en supermarché. Bravo !"</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-background-dark font-bold">S</div>
+<div>
+<p class="text-white font-bold text-sm">Sophie Martin</p>
+<p class="text-xs text-text-muted">Cliente vérifiée</p>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface-dark p-8 rounded-2xl relative">
+<span class="material-symbols-outlined text-6xl text-white/5 absolute top-4 right-4">format_quote</span>
+<p class="text-text-muted mb-6 relative z-10 italic">"Livraison rapide et emballage soigné (zéro plastique !). Le miel d'Acacia est d'une douceur... mes enfants l'adorent."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-background-dark font-bold">T</div>
+<div>
+<p class="text-white font-bold text-sm">Thomas Dubois</p>
+<p class="text-xs text-text-muted">Client vérifié</p>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-surface-dark p-8 rounded-2xl relative">
+<span class="material-symbols-outlined text-6xl text-white/5 absolute top-4 right-4">format_quote</span>
+<p class="text-text-muted mb-6 relative z-10 italic">"J'ai eu la chance de visiter le rucher lors d'une porte ouverte. Ahmed est passionnant et son miel respire l'authenticité."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-background-dark font-bold">M</div>
+<div>
+<p class="text-white font-bold text-sm">Marie Leroy</p>
+<p class="text-xs text-text-muted">Cliente vérifiée</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-darker pt-20 pb-10 border-t border-surface-dark">
+<div class="max-w-7xl mx-auto px-4 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+<!-- Brand -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 text-white mb-2">
+<div class="w-8 h-8 flex items-center justify-center bg-primary rounded text-background-dark">
+<span class="material-symbols-outlined text-lg">hive</span>
+</div>
+<h2 class="text-white text-lg font-bold">Le Rucher d'Ahmed</h2>
+</div>
+<p class="text-text-muted text-sm leading-relaxed">
+                        Miel artisanal récolté avec amour. Nous nous engageons pour une apiculture durable et respectueuse de l'environnement.
+                    </p>
+<div class="flex gap-4 mt-2">
+<a class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary hover:text-background-dark transition-colors" href="#">
+<span class="text-xs font-bold">FB</span>
+</a>
+<a class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary hover:text-background-dark transition-colors" href="#">
+<span class="text-xs font-bold">IG</span>
+</a>
+</div>
+</div>
+<!-- Links -->
+<div>
+<h3 class="text-white font-bold mb-6">Navigation</h3>
+<ul class="space-y-3">
+<li><a class="text-text-muted hover:text-primary text-sm transition-colors" href="#">Accueil</a></li>
+<li><a class="text-text-muted hover:text-primary text-sm transition-colors" href="#">Boutique</a></li>
+<li><a class="text-text-muted hover:text-primary text-sm transition-colors" href="#">Notre Histoire</a></li>
+<li><a class="text-text-muted hover:text-primary text-sm transition-colors" href="#">Blog Apicole</a></li>
+</ul>
+</div>
+<!-- Legal -->
+<div>
+<h3 class="text-white font-bold mb-6">Informations</h3>
+<ul class="space-y-3">
+<li><a class="text-text-muted hover:text-primary text-sm transition-colors" href="#">Contact</a></li>
+<li><a class="text-text-muted hover:text-primary text-sm transition-colors" href="#">Livraison &amp; Retours</a></li>
+<li><a class="text-text-muted hover:text-primary text-sm transition-colors" href="#">Mentions Légales</a></li>
+<li><a class="text-text-muted hover:text-primary text-sm transition-colors" href="#">CGV</a></li>
+</ul>
+</div>
+<!-- Newsletter -->
+<div>
+<h3 class="text-white font-bold mb-6">Restez informé</h3>
+<p class="text-text-muted text-sm mb-4">Recevez nos actualités et soyez prévenu des nouvelles récoltes.</p>
+<form class="flex flex-col gap-3">
+<input class="bg-surface-dark border border-surface-dark text-white text-sm rounded-lg px-4 py-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary placeholder-white/30" placeholder="Votre email" type="email"/>
+<button class="bg-primary hover:bg-primary-dark text-background-dark font-bold text-sm py-3 px-4 rounded-lg transition-colors" type="button">
+                            S'inscrire
+                        </button>
+</form>
+</div>
+</div>
+<div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-text-muted text-xs">© 2023 Le Rucher d'Ahmed. Tous droits réservés.</p>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+<span class="text-text-muted text-xs">Site sécurisé</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

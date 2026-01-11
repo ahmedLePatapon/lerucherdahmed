@@ -13,15 +13,15 @@ Configurer les couleurs personnalisées, les polices Google Fonts (Plus Jakarta 
 
 ### 1.1 Installer les dépendances
 
-- [ ] Exécuter la commande suivante pour installer Lucide React (icônes) :
-
+- [x] Exécuter la commande suivante pour installer Lucide React (icônes) :
 ```bash
 npm install lucide-react
 ```
 
+
 ### 1.2 Configurer globals.css
 
-- [ ] Remplacer le contenu de `app/globals.css` par :
+- [x] Remplacer le contenu de `app/globals.css` par :
 
 ```css
 @import "tailwindcss";
@@ -119,9 +119,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 ```
 
+
 ### 1.3 Configurer layout.tsx avec Google Fonts
 
-- [ ] Remplacer le contenu de `app/layout.tsx` par :
+- [x] Remplacer le contenu de `app/layout.tsx` par :
 
 ```tsx
 import type { Metadata } from "next";

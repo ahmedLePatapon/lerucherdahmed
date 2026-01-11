@@ -16,7 +16,7 @@ Créer les composants de layout réutilisables : Header avec navigation responsi
 
 ### 3.1 Créer le composant Logo
 
-- [ ] Créer le fichier `components/layout/Logo.tsx` :
+- [x] Créer le fichier `components/layout/Logo.tsx` :
 
 ```tsx
 import Link from "next/link";
@@ -70,7 +70,7 @@ export function Logo({ variant = "dark", size = "md", className }: LogoProps) {
 
 ### 3.2 Créer le composant MobileMenu
 
-- [ ] Créer le fichier `components/layout/MobileMenu.tsx` :
+- [x] Créer le fichier `components/layout/MobileMenu.tsx` :
 
 ```tsx
 "use client";
@@ -191,7 +191,7 @@ export function MobileMenu({ items }: MobileMenuProps) {
 
 ### 3.3 Créer le composant Header
 
-- [ ] Créer le fichier `components/layout/Header.tsx` :
+- [x] Créer le fichier `components/layout/Header.tsx` :
 
 ```tsx
 "use client";
@@ -259,7 +259,7 @@ export function Header() {
 
 ### 3.4 Créer le composant Footer
 
-- [ ] Créer le fichier `components/layout/Footer.tsx` :
+- [x] Créer le fichier `components/layout/Footer.tsx` :
 
 ```tsx
 "use client";
@@ -405,7 +405,7 @@ export function Footer() {
 
 ### 3.5 Créer le fichier d'export index
 
-- [ ] Créer le fichier `components/layout/index.ts` :
+- [x] Créer le fichier `components/layout/index.ts` :
 
 ```ts
 export { Logo } from "./Logo";
@@ -419,6 +419,22 @@ export { Footer } from "./Footer";
 ## Step 3 Verification Checklist
 
 - [ ] Pas d'erreurs TypeScript
+- [ ] Le Header s'affiche en haut de page avec :
+  - [ ] Logo cliquable vers l'accueil
+  - [ ] Navigation desktop visible sur écrans larges
+  - [ ] Bouton "Commander" jaune
+  - [ ] Menu hamburger sur mobile
+- [ ] Le Footer affiche :
+  - [ ] Logo et description
+  - [ ] Informations de contact
+  - [ ] Liens de navigation
+  - [ ] Formulaire newsletter
+- [ ] Le menu mobile s'ouvre/ferme correctement
+- [ ] Les liens de navigation fonctionnent
+
+## Step 3 Verification Results
+
+- [x] Pas d'erreurs TypeScript (`npm run build` compilé avec succès)
 - [ ] Le Header s'affiche en haut de page avec :
   - [ ] Logo cliquable vers l'accueil
   - [ ] Navigation desktop visible sur écrans larges

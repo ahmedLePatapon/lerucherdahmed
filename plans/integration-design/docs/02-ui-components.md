@@ -16,7 +16,7 @@ Créer les composants UI génériques réutilisables avec variantes et props Typ
 
 ### 2.1 Créer le composant Button
 
-- [ ] Créer le fichier `components/ui/Button.tsx` :
+- [x] Créer le fichier `components/ui/Button.tsx` :
 
 ```tsx
 import { forwardRef, ButtonHTMLAttributes } from "react";
@@ -103,7 +103,7 @@ export { Button };
 
 ### 2.2 Créer le composant Badge
 
-- [ ] Créer le fichier `components/ui/Badge.tsx` :
+- [x] Créer le fichier `components/ui/Badge.tsx` :
 
 ```tsx
 import { HTMLAttributes } from "react";
@@ -141,7 +141,7 @@ export { Badge };
 
 ### 2.3 Créer le composant Input
 
-- [ ] Créer le fichier `components/ui/Input.tsx` :
+- [x] Créer le fichier `components/ui/Input.tsx` :
 
 ```tsx
 import { forwardRef, InputHTMLAttributes } from "react";
@@ -192,7 +192,7 @@ export { Input };
 
 ### 2.4 Créer le composant Textarea
 
-- [ ] Créer le fichier `components/ui/Textarea.tsx` :
+- [x] Créer le fichier `components/ui/Textarea.tsx` :
 
 ```tsx
 import { forwardRef, TextareaHTMLAttributes } from "react";
@@ -243,7 +243,7 @@ export { Textarea };
 
 ### 2.5 Créer le composant Card
 
-- [ ] Créer le fichier `components/ui/Card.tsx` :
+- [x] Créer le fichier `components/ui/Card.tsx` :
 
 ```tsx
 import { HTMLAttributes, forwardRef } from "react";
@@ -302,7 +302,7 @@ export { Card, CardHeader, CardContent, CardFooter };
 
 ### 2.6 Créer l'utilitaire cn()
 
-- [ ] Créer le fichier `lib/utils.ts` :
+- [x] Créer le fichier `lib/utils.ts` :
 
 ```ts
 import { type ClassValue, clsx } from "clsx";
@@ -315,7 +315,7 @@ export function cn(...inputs: ClassValue[]) {
 
 ### 2.7 Installer les dépendances pour cn()
 
-- [ ] Exécuter la commande :
+- [x] Exécuter la commande :
 
 ```bash
 npm install clsx tailwind-merge
@@ -323,7 +323,7 @@ npm install clsx tailwind-merge
 
 ### 2.8 Créer le fichier d'export index
 
-- [ ] Créer le fichier `components/ui/index.ts` :
+- [x] Créer le fichier `components/ui/index.ts` :
 
 ```ts
 export { Button } from "./Button";

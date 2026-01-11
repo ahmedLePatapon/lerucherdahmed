@@ -1,7 +1,7 @@
-import PageHeader from "../../components/sections/PageHeader";
-import StorySection from "../../components/sections/StorySection";
-import TestimonialsSection from "../../components/sections/TestimonialsSection";
-import CTASection from "../../components/sections/CTASection";
+import { PageHeader } from "../../components/sections/PageHeader";
+import { StorySection } from "../../components/sections/StorySection";
+import { TestimonialsSection } from "../../components/sections/TestimonialsSection";
+import { CTASection } from "../../components/sections/CTASection";
 
 export const metadata = {
     title: "À propos — Le Rucher d'Ahmed",

@@ -10,6 +10,29 @@ export const metadata: Metadata = {
     title: "Nos Miels",
     description:
         "Découvrez notre gamme de miels artisanaux : miel de lavande, acacia, châtaignier et plus encore. 100% naturel, récolté en Charente.",
+    openGraph: {
+        title: "Nos Miels — Le Rucher d'Ahmed",
+        description:
+            "Découvrez notre gamme de miels artisanaux : miel de lavande, acacia, châtaignier et plus encore.",
+        url: "https://lerucherdahmed.fr/nos-miels",
+        siteName: "Le Rucher d'Ahmed",
+        images: [
+            {
+                url: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=1200&q=80",
+                width: 1200,
+                height: 630,
+                alt: "Nos miels",
+            },
+        ],
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Nos Miels — Le Rucher d'Ahmed",
+        description:
+            "Découvrez notre gamme de miels artisanaux : miel de lavande, acacia, châtaignier et plus encore.",
+        images: ["https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=1200&q=80"],
+    },
 };
 
 const advantages = [

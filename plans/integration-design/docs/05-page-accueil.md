@@ -23,7 +23,7 @@ Implémenter la page d'accueil complète avec hero immersif, section "Pourquoi c
 
 ### 5.1 Créer le composant FeatureCard
 
-- [ ] Créer le fichier `components/cards/FeatureCard.tsx` :
+- [x] Créer le fichier `components/cards/FeatureCard.tsx` :
 
 ```tsx
 import { LucideIcon } from "lucide-react";
@@ -61,7 +61,7 @@ export function FeatureCard({
 
 ### 5.2 Créer le composant ProductCard
 
-- [ ] Créer le fichier `components/cards/ProductCard.tsx` :
+- [x] Créer le fichier `components/cards/ProductCard.tsx` :
 
 ```tsx
 import Image from "next/image";
@@ -162,7 +162,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
 
 ### 5.3 Créer le composant TestimonialCard
 
-- [ ] Créer le fichier `components/cards/TestimonialCard.tsx` :
+- [x] Créer le fichier `components/cards/TestimonialCard.tsx` :
 
 ```tsx
 import { Quote } from "lucide-react";
@@ -205,7 +205,7 @@ export function TestimonialCard({ testimonial, className }: TestimonialCardProps
 
 ### 5.4 Créer le fichier d'export des cards
 
-- [ ] Créer le fichier `components/cards/index.ts` :
+- [x] Créer le fichier `components/cards/index.ts` :
 
 ```ts
 export { FeatureCard } from "./FeatureCard";
@@ -215,7 +215,7 @@ export { TestimonialCard } from "./TestimonialCard";
 
 ### 5.5 Créer la section Hero
 
-- [ ] Créer le fichier `components/sections/HeroSection.tsx` :
+- [x] Créer le fichier `components/sections/HeroSection.tsx` :
 
 ```tsx
 import Link from "next/link";
@@ -299,7 +299,7 @@ export function HeroSection() {
 
 ### 5.6 Créer la section Features
 
-- [ ] Créer le fichier `components/sections/FeaturesSection.tsx` :
+- [x] Créer le fichier `components/sections/FeaturesSection.tsx` :
 
 ```tsx
 import { Leaf, MapPin, Heart } from "lucide-react";
@@ -363,7 +363,7 @@ export function FeaturesSection() {
 
 ### 5.7 Créer la section ProductsGrid
 
-- [ ] Créer le fichier `components/sections/ProductsGrid.tsx` :
+- [x] Créer le fichier `components/sections/ProductsGrid.tsx` :
 
 ```tsx
 import Link from "next/link";
@@ -425,7 +425,7 @@ export function ProductsGrid({
 
 ### 5.8 Créer la section Story (Histoire d'Ahmed)
 
-- [ ] Créer le fichier `components/sections/StorySection.tsx` :
+- [x] Créer le fichier `components/sections/StorySection.tsx` :
 
 ```tsx
 import Image from "next/image";
@@ -508,7 +508,7 @@ export function StorySection() {
 
 ### 5.9 Créer la section Testimonials
 
-- [ ] Créer le fichier `components/sections/TestimonialsSection.tsx` :
+- [x] Créer le fichier `components/sections/TestimonialsSection.tsx` :
 
 ```tsx
 import { TestimonialCard } from "@/components/cards/TestimonialCard";
@@ -546,7 +546,7 @@ export function TestimonialsSection() {
 
 ### 5.10 Créer la section CTA
 
-- [ ] Créer le fichier `components/sections/CTASection.tsx` :
+- [x] Créer le fichier `components/sections/CTASection.tsx` :
 
 ```tsx
 import Link from "next/link";
@@ -605,7 +605,7 @@ export function CTASection({
 
 ### 5.11 Créer le fichier d'export des sections
 
-- [ ] Créer le fichier `components/sections/index.ts` :
+- [x] Créer le fichier `components/sections/index.ts` :
 
 ```ts
 export { HeroSection } from "./HeroSection";
@@ -618,7 +618,7 @@ export { CTASection } from "./CTASection";
 
 ### 5.12 Créer la page d'accueil
 
-- [ ] Remplacer le contenu de `app/page.tsx` par :
+- [x] Remplacer le contenu de `app/page.tsx` par :
 
 ```tsx
 import {

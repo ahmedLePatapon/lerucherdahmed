@@ -38,7 +38,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
             )}
         >
             <Link href={`/nos-miels/${product.slug}`} className="block">
-                <div className="aspect-[4/3] bg-gray-100 relative overflow-hidden">
+                <div className="aspect-4/3 bg-gray-100 relative overflow-hidden">
                     <Image
                         src={product.image}
                         alt={product.name}

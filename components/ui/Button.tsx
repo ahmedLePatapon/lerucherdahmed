@@ -25,13 +25,13 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
         const variants: Record<string, string> = {
             primary:
-                "bg-primary text-neutral-dark hover:bg-primary-dark rounded-xl shadow-lg shadow-primary/10",
+                "bg-primary text-neutral-dark hover:bg-primary-dark rounded-lg shadow-lg shadow-primary/10",
             secondary:
-                "bg-accent text-white hover:bg-accent/90 rounded-xl shadow-lg shadow-accent/10",
+                "bg-accent text-white hover:bg-accent/90 rounded-lg shadow-lg shadow-accent/10",
             outline:
-                "bg-transparent border-2 border-[#E8E4DB] text-text-main hover:border-primary hover:text-primary rounded-xl",
+                "bg-transparent border-2 border-[#E8E4DB] text-text-main hover:border-primary hover:text-primary rounded-lg",
             ghost:
-                "bg-transparent hover:bg-primary/10 text-text-main hover:text-primary rounded-xl",
+                "bg-transparent hover:bg-primary/10 text-text-main hover:text-primary rounded-lg",
         };
 
         const sizes: Record<string, string> = {

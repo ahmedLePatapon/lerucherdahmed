@@ -30,7 +30,8 @@ export const products: Product[] = [
             "Un miel crémeux aux notes florales délicates, récolté sur les plateaux ensoleillés de Provence. Sa couleur dorée et sa texture onctueuse en font un incontournable pour les amateurs de saveurs subtiles.",
         shortDescription:
             "Un miel crémeux aux notes florales délicates, récolté sur les plateaux ensoleillés de Provence.",
-        image: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=800&q=80",
+        // image: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=800&q=80",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCYkPLxTy8_0jXmFoYa53BEm3W3QISNDYkTf8y20zGEbK7LPL9h8Njm1EHzfHyinaY0lLM8OmyK1oQPQUOht4s6yw4tYre-5DX-aeuYBQ1ZS9YdFMJ2RFdR2A4Dc9kMk26FFpJSuNtUiYD0zcR2zojYdiz6hTAlo1LgtoYTueH5SfXQHyeNoGgqKxiBjKd1KnmYDhm3BLo40p0SP2L3lvgnp93Yq7Py0WwutaJ6yGok8mAngXk1caWgYrDwHxolQb8X7q3et2Dxt9c",
         badge: "best-seller",
         rating: 4.9,
         weight: "500g",

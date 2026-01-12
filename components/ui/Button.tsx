@@ -21,11 +21,11 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         ref
     ) => {
         const baseStyles =
-            "inline-flex items-center justify-center font-bold transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed";
+            "inline-flex items-center justify-center font-bold transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed group";
 
         const variants: Record<string, string> = {
             primary:
-                "bg-primary text-neutral-dark hover:bg-primary-dark hover:-translate-y-1 rounded-xl shadow-lg shadow-primary/10",
+                "bg-primary text-neutral-dark hover:bg-primary-dark rounded-xl shadow-lg shadow-primary/10",
             secondary:
                 "bg-accent text-white hover:bg-accent/90 rounded-xl shadow-lg shadow-accent/10",
             outline:

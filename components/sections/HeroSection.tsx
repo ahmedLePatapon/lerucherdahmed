@@ -6,7 +6,7 @@ export function HeroSection() {
     return (
         <section className="relative min-h-screen flex items-center pt-20 bg-background-dark">
             <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-gradient-to-r from-background-dark/90 via-background-dark/70 to-transparent z-10" />
+                <div className="absolute inset-0 bg-linear-to-r from-background-dark/90 via-background-dark/70 to-transparent z-10" />
                 <div
                     className="w-full h-full bg-cover bg-center"
                     style={{
@@ -23,19 +23,21 @@ export function HeroSection() {
                         <span className="text-primary text-xs font-bold uppercase tracking-wide">Nouvelle récolte disponible</span>
                     </div>
 
-                    <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white leading-tight">
-                        L&apos;Or de la Nature, <span className="text-gradient">Directement de la Ruche</span>
+                    <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight drop-shadow-lg">
+                        L&apos;Or de la Nature, <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-primary-dark">Directement de la Ruche</span>
                     </h1>
 
-                    <p className="text-lg text-text-muted-light max-w-xl leading-relaxed">
+                    <p className="text-lg md:text-xl text-text-light/90 font-semibold max-w-xl drop-shadow-md">
                         Miel artisanal 100% local produit par Le Rucher d&apos;Ahmed. Découvrez l&apos;authenticité de nos saveurs et soutenez une apiculture durable.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4">
                         <Link href="/nos-miels">
-                            <Button size="lg" variant="primary">
+                            <Button size="lg" variant="primary" className="text-white">
                                 Commander notre Miel
-                                <ArrowRight size={20} />
+                                <span className="ml-2 inline-flex transition-transform group-hover:translate-x-1 text-white">
+                                    <ArrowRight size={20} />
+                                </span>
                             </Button>
                         </Link>
                         <Link href="/contact">

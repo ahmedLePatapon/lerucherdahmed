@@ -5,6 +5,7 @@ import { getProductBySlug } from "@/lib/data/products";
 import ProductGallery from "@/components/product/ProductGallery";
 import ProductInfo from "@/components/product/ProductInfo";
 import ProductTabs from "@/components/product/ProductTabs";
+import { ProductsGrid } from "@/components/sections/ProductsGrid";
 
 type Params = { params: { slug: string } };
 
@@ -48,7 +49,7 @@ export default async function ProductPage({ params }: Params) {
 
                         <aside className="lg:col-span-1">
                             <div className="sticky top-24 bg-white p-6 rounded-md shadow">
-                                <ProductInfo name={product.name} price={product.price} rating={product.rating} weight={product.weight} />
+                                <ProductInfo product={product} />
                             </div>
                         </aside>
                     </div>
@@ -62,6 +63,8 @@ export default async function ProductPage({ params }: Params) {
                     </div>
                 </div>
             </section>
+
+            <ProductsGrid title="Vous aimerez aussi" subtitle="D'autres miels sélectionnés pour vous" showViewAll={false} limit={3} />
         </>
     );
 }

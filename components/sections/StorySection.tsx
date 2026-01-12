@@ -43,11 +43,9 @@ export function StorySection() {
                             <p className="text-text-muted text-sm mt-2">— Ahmed, Apiculteur depuis 1998</p>
                         </div>
 
-                        <Link href="/a-propos" className="w-fit">
-                            <Link href="#" className="inline-flex items-center text-text-main hover:text-primary-dark transition-colors group w-fit font-bold decoration-2 underline-offset-4">
-                                <span className="border-b-2 border-primary pb-1">En savoir plus sur Ahmed</span>
-                                <span className="ml-1 text-lg group-hover:translate-x-1 transition-transform"><ArrowRight size={20} /></span>
-                            </Link>
+                        <Link href="#" className="inline-flex items-center text-text-main hover:text-primary-dark transition-colors group w-fit font-bold decoration-2 underline-offset-4">
+                            <span className="border-b-2 border-primary pb-1">En savoir plus sur Ahmed</span>
+                            <span className="ml-1 text-lg group-hover:translate-x-1 transition-transform"><ArrowRight size={20} /></span>
                         </Link>
                     </div>
                 </div>

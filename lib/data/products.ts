@@ -15,6 +15,9 @@ export interface Product {
     taste?: "doux" | "moyen" | "intense";
     inStock: boolean;
     featured: boolean;
+    specs?: Record<string, string>;
+    nutrition?: Record<string, string>;
+    apiculteurNote?: string;
 }
 
 export const products: Product[] = [
@@ -97,6 +100,20 @@ export const products: Product[] = [
         taste: "doux",
         inStock: true,
         featured: false,
+        specs: {
+            "Origine": "Rucher de Charente",
+            "Poids net": "500g",
+            "Récolte": "Avril",
+            "DLUO": "24 mois",
+        },
+        nutrition: {
+            "Énergie": "320 kcal / 100g",
+            "Glucides": "80 g",
+            "Protéines": "0.3 g",
+            "Lipides": "0 g",
+        },
+        apiculteurNote:
+            "Ce miel de printemps est issu des premières floraisons du verger. Il révèle des arômes fruités et une douceur légère, parfait sur des tartines ou dans un yaourt.",
     },
     {
         id: "5",

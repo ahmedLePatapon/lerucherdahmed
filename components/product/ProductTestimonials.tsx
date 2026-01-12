@@ -1,52 +1,3 @@
-import { useState } from "react";
-import { testimonials as allTestimonials } from "@/lib/data/testimonials";
-
-interface Testimonial {
-    id: string;
-    name: string;
-    initial: string;
-    role: string;
-    text: string;
-    rating: number;
-    product?: string;
-}
-
-interface Props {
-    productName?: string;
-}
-
-export default function ProductTestimonials({ productName }: Props) {
-    const filtered = allTestimonials.filter((t) => (productName ? t.product === productName : true));
-    const [visible, setVisible] = useState(3);
-
-    return (
-        <div>
-            {filtered.slice(0, visible).map((t: Testimonial) => (
-                <div key={t.id} className="border-b py-4">
-                    <div className="flex items-center gap-3 mb-2">
-                        <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center font-bold">{t.initial}</div>
-                        <div>
-                            <div className="font-medium">{t.name}</div>
-                            <div className="text-sm text-text-muted">{t.role}</div>
-                        </div>
-                    </div>
-                    <p className="text-text-muted">{t.text}</p>
-                </div>
-            ))}
-
-            {visible < filtered.length && (
-                <div className="mt-4 text-center">
-                    <button
-                        onClick={() => setVisible((v) => v + 3)}
-                        className="px-4 py-2 border rounded-md"
-                    >
-                        Charger plus d'avis
-                    </button>
-                </div>
-            )}
-        </div>
-    );
-}
 "use client";
 
 import React, { useState } from "react";
@@ -80,8 +31,8 @@ export default function ProductTestimonials({ productName }: ProductTestimonials
                                 </div>
                             </div>
                             <div className="flex items-center text-yellow-500">
-                                {Array.from({ length: t.rating }).map((_, i) => (
-                                    <Star key={i} className="w-4 h-4" />
+                                {Array.from({ length: Math.max(0, Math.floor(t.rating)) }).map((_, i) => (
+                                    <Star key={i} size={14} />
                                 ))}
                             </div>
                         </div>

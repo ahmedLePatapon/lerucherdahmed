@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export function RuchersHero() {
     return (
         <section className="relative flex min-h-[60vh] w-full flex-col justify-center overflow-hidden">

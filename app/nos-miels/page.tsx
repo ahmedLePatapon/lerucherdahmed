@@ -11,11 +11,11 @@ export const metadata: Metadata = {
     description:
         "Découvrez notre gamme de miels artisanaux : miel de lavande, acacia, châtaignier et plus encore. 100% naturel, récolté en Charente.",
     openGraph: {
-        title: "Nos Miels — Le Rucher d'Ahmed",
+        title: "Nos Miels — Le Rucher d&apos;Ahmed",
         description:
             "Découvrez notre gamme de miels artisanaux : miel de lavande, acacia, châtaignier et plus encore.",
         url: "https://lerucherdahmed.fr/nos-miels",
-        siteName: "Le Rucher d'Ahmed",
+        siteName: "Le Rucher d&apos;Ahmed",
         images: [
             {
                 url: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=1200&q=80",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Nos Miels — Le Rucher d'Ahmed",
+        title: "Nos Miels — Le Rucher d&apos;Ahmed",
         description:
             "Découvrez notre gamme de miels artisanaux : miel de lavande, acacia, châtaignier et plus encore.",
         images: ["https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=1200&q=80"],
@@ -40,7 +40,7 @@ const advantages = [
         icon: Leaf,
         title: "100% Pur & Naturel",
         description:
-            "Nos miels sont récoltés et mis en pot sans aucun traitement ni ajout. La pureté à l'état brut.",
+            "Nos miels sont récoltés et mis en pot sans aucun traitement ni ajout. La pureté à l&apos;état brut.",
     },
     {
         icon: Award,
@@ -86,7 +86,7 @@ export default function NosMielsPage() {
                     <div className="text-center mb-16">
                         <span className="text-primary text-sm font-bold uppercase tracking-wider">Pourquoi nous choisir</span>
                         <h2 className="text-3xl md:text-4xl font-bold text-text-main mt-4 mb-6">Les avantages du miel artisanal</h2>
-                        <p className="text-text-muted max-w-2xl mx-auto">En choisissant Le Rucher d'Ahmed, vous optez pour un miel d'exception, produit dans le respect de la nature et des abeilles.</p>
+                        <p className="text-text-muted max-w-2xl mx-auto">En choisissant Le Rucher d&apos;Ahmed, vous optez pour un miel d&apos;exception, produit dans le respect de la nature et des abeilles.</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -99,7 +99,7 @@ export default function NosMielsPage() {
 
             <CTASection
                 title="Une question sur nos miels ?"
-                description="N'hésitez pas à nous contacter pour en savoir plus sur nos produits et notre méthode de production."
+                description="N&apos;hésitez pas à nous contacter pour en savoir plus sur nos produits et notre méthode de production."
                 primaryCTA={{ label: "Nous contacter", href: "/contact" }}
                 secondaryCTA={{ label: "Découvrir nos ruchers", href: "/nos-ruchers" }}
             />

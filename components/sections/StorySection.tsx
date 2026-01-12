@@ -8,24 +8,25 @@ export function StorySection() {
         <section className="py-24 bg-white">
             <div className="max-w-7xl mx-auto px-4 lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
-                    <div className="relative">
-                        <div className="aspect-[4/5] rounded-2xl overflow-hidden">
+                    <div className="relative order-2 lg:order-1">
+                        <div className="absolute -inset-4 bg-primary rounded-2xl rotate-3 opacity-20 blur-lg"></div>
+                        <div className="relative aspect-square lg:aspect-4/3 rounded-2xl overflow-hidden shadow-2xl">
                             <Image
-                                src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=800&q=80"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcvNGgz0D5l81wOQgG8d8XYeClsZHJD4cqMifsiwerO4XpcGXo_XMg9cpx1HwLbBkK2F5QtLAQ6Re-9DUu0ZXrPTjIHUYjpp1tER9BnyXcbB_71ISsYhnUjr6f4Ych3Umny-kcF03LxQFOc0GZZPGeL5W1kDRVODq0i1IzeeQUI0n1pb92RTBim9osse_EfznKsL5Vz7ZuUCjzpiRLz82KaIo8xtow9ncy6MCxlikk5cRqPCoBQagLUmelZmc48aRlPJa1VDrx8uc"
                                 alt="Ahmed, apiculteur passionné"
                                 fill
                                 className="object-cover"
                                 sizes="(max-width: 1024px) 100vw, 50vw"
                             />
-                        </div>
-                        <div className="absolute -bottom-8 -right-8 bg-primary p-6 rounded-2xl shadow-xl max-w-xs hidden lg:block">
-                            <Quote size={24} className="text-white/30 mb-2" />
-                            <p className="text-white text-sm italic leading-relaxed">&ldquo;Je ne suis pas le propriétaire de mes ruches, je n&apos;en suis que le gardien.&rdquo;</p>
-                            <p className="text-white/80 text-xs mt-3">— Ahmed, Apiculteur depuis 1998</p>
+                            <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 to-transparent p-8">
+                                <p className="text-white text-lg font-medium">"Le respect de l'abeille est la clé d'un miel
+                                    d'exception."</p>
+                                <p className="text-primary mt-2 font-bold">— Ahmed</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div className="flex flex-col gap-6">
+                    <div className="flex flex-col gap-6 lg:order-2">
                         <span className="text-primary text-sm font-bold uppercase tracking-wider">Notre histoire</span>
                         <h2 className="text-3xl md:text-4xl font-bold text-text-main">Une Rencontre, Une Vocation</h2>
                         <div className="space-y-4 text-text-muted leading-relaxed">
@@ -43,10 +44,10 @@ export function StorySection() {
                         </div>
 
                         <Link href="/a-propos" className="w-fit">
-                            <Button variant="primary">
-                                Découvrir notre histoire
-                                <ArrowRight size={16} />
-                            </Button>
+                            <button
+                                className="flex items-center gap-3 text-text-main font-bold hover:text-primary-dark transition-colors group w-fit">
+                                <span className="border-b-2 border-primary pb-1">En savoir plus sur Ahmed <ArrowRight size={16} /></span>
+                            </button>
                         </Link>
                     </div>
                 </div>

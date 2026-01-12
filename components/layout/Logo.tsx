@@ -8,8 +8,15 @@ interface LogoProps {
     className?: string;
 }
 
+type SizeKey = "sm" | "md" | "lg";
+type SizeSpec = {
+    icon: string;
+    iconSize: number;
+    text: string;
+};
+
 export function Logo({ variant = "dark", size = "md", className }: LogoProps) {
-    const sizes: Record<string, any> = {
+    const sizes: Record<SizeKey, SizeSpec> = {
         sm: {
             icon: "w-8 h-8",
             iconSize: 16,
@@ -40,7 +47,7 @@ export function Logo({ variant = "dark", size = "md", className }: LogoProps) {
                 <Hexagon size={sizes[size].iconSize} fill="currentColor" />
             </div>
             <span className={cn("font-bold", sizes[size].text, textColor)}>
-                Le Rucher d'Ahmed
+                Le Rucher d&apos;Ahmed
             </span>
         </Link>
     );

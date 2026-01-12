@@ -47,7 +47,7 @@ export default function ProductTestimonials({ productName }: ProductTestimonials
                         onClick={() => setVisible((v) => v + 3)}
                         className="px-4 py-2 bg-background-light rounded-md"
                     >
-                        Charger plus d'avis
+                        Charger plus d&apos;avis
                     </button>
                 </div>
             )}

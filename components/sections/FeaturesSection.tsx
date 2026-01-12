@@ -30,7 +30,7 @@ export function FeaturesSection() {
                     <div className="md:w-1/3 space-y-6">
                         <h2 className="text-3xl md:text-4xl font-extrabold text-text-main">Pourquoi choisir notre miel ?</h2>
                         <p className="text-text-muted text-lg">
-                            Une apiculture respectueuse des abeilles et de l'environnement pour un produit d'exception,
+                            Une apiculture respectueuse des abeilles et de l&apos;environnement pour un produit d&apos;exception,
                             récolté avec patience et passion.
                         </p>
                         <a className="inline-flex items-center text-primary-dark font-bold hover:underline decoration-2 underline-offset-4"

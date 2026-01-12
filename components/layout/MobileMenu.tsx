@@ -21,7 +21,9 @@ export function MobileMenu({ items }: MobileMenuProps) {
     const pathname = usePathname();
 
     useEffect(() => {
-        setIsOpen(false);
+        // Avoid calling setState synchronously inside the effect to satisfy lint rules
+        const t = setTimeout(() => setIsOpen(false), 0);
+        return () => clearTimeout(t);
     }, [pathname]);
 
     useEffect(() => {

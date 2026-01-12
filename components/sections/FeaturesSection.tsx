@@ -1,4 +1,5 @@
 import { Leaf, MapPin, Heart, ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { FeatureCard } from "@/components/cards/FeatureCard";
 
 const features = [
@@ -33,12 +34,10 @@ export function FeaturesSection() {
                             Une apiculture respectueuse des abeilles et de l&apos;environnement pour un produit d&apos;exception,
                             récolté avec patience et passion.
                         </p>
-                        <a className="inline-flex items-center text-primary-dark font-bold hover:underline decoration-2 underline-offset-4"
-                            href="#">
+                        <Link href="#" className="inline-flex items-center text-primary-dark font-bold hover:underline decoration-2 underline-offset-4">
                             En savoir plus sur notre méthode
                             <span className="ml-1 text-lg"><ArrowRight size={20} /></span>
-
-                        </a>
+                        </Link>
                     </div>
                     <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         {features.map((feature) => (

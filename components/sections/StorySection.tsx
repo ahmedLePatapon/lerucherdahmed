@@ -44,10 +44,10 @@ export function StorySection() {
                         </div>
 
                         <Link href="/a-propos" className="w-fit">
-                            <button
-                                className="flex items-center gap-3 text-text-main font-bold hover:text-primary-dark transition-colors group w-fit">
-                                <span className="border-b-2 border-primary pb-1">En savoir plus sur Ahmed <ArrowRight size={16} /></span>
-                            </button>
+                            <Link href="#" className="inline-flex items-center text-text-main hover:text-primary-dark transition-colors group w-fit font-bold decoration-2 underline-offset-4">
+                                <span className="border-b-2 border-primary pb-1">En savoir plus sur Ahmed</span>
+                                <span className="ml-1 text-lg group-hover:translate-x-1 transition-transform"><ArrowRight size={20} /></span>
+                            </Link>
                         </Link>
                     </div>
                 </div>

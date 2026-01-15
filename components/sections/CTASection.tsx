@@ -30,11 +30,10 @@ export function CTASection({
                     <Link href={primaryCTA.href}>
                         <Button size="lg" className="bg-white text-primary hover:bg-white/90">
                             {primaryCTA.label}
-                            <ArrowRight size={20} />
                         </Button>
                     </Link>
                     <Link href={secondaryCTA.href}>
-                        <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
+                        <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 hover:text-white">
                             {secondaryCTA.label}
                         </Button>
                     </Link>

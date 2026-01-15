@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html class="light" lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Notre Histoire - Le Rucher d'Ahmed</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#F2B705", // Jaune miel
+                        "primary-dark": "#D98E04", // Ambre doré
+                        "accent": "#6B8E23", // Vert naturel
+                        "background-light": "#FAF7F2", // Blanc cassé
+                        "background-dark": "#1C1C1C", // Noir profond
+                        "surface-light": "#FFFFFF", // White for cards in light mode
+                        "text-main": "#1C1C1C", // Noir profond for text
+                        "text-muted": "#555555", // Grey for muted text
+                        "text-light": "#FAF7F2", // Blanc cassé for text on dark bg
+                    },
+                    fontFamily: {
+                        "sans": ["Plus Jakarta Sans", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                        "display": ["Playfair Display", "serif"]
+                    },
+                    backgroundImage: {
+                        'paper-texture': "url('data:image/svg+xml,%3Csvg width=\\'100\\' height=\\'100\\' viewBox=\\'0 0 100 100\\' xmlns=\\'http://www.w3.org/2000/svg\\'%3E%3Cpath d=\\'M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z\\' fill=\\'%23d98e04\\' fill-opacity=\\'0.03\\' fill-rule=\\'evenodd\\'/%3E%3C/svg%3E") '
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .drop-cap:first-letter {
+            font-family: 'Playfair Display', serif;
+            float: left;
+            font-size: 5rem;
+            line-height: 0.8;
+            padding-right: 0.5rem;
+            padding-top: 0.2rem;
+            color: #D98E04;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-background-light text-text-main overflow-x-hidden selection:bg-primary/30">
+    <div
+        class="fixed top-0 left-0 right-0 z-50 w-full bg-background-light/95 backdrop-blur-md border-b border-[#e5e0d8]">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <header class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-3 text-text-main">
+                    <div class="w-10 h-10 flex items-center justify-center bg-primary rounded-lg text-white shadow-sm">
+                        <span class="material-symbols-outlined text-2xl">hive</span>
+                    </div>
+                    <h2 class="font-serif text-xl font-bold tracking-tight">Le Rucher d'Ahmed</h2>
+                </div>
+                <div class="hidden md:flex flex-1 justify-end items-center gap-8">
+                    <nav class="flex items-center gap-8">
+                        <a class="text-text-muted hover:text-primary-dark transition-colors text-sm font-medium tracking-wide"
+                            href="#">Accueil</a>
+                        <a class="text-text-muted hover:text-primary-dark transition-colors text-sm font-medium tracking-wide"
+                            href="#">Notre Miel</a>
+                        <a class="text-text-main border-b-2 border-primary pb-1 transition-colors text-sm font-bold tracking-wide"
+                            href="#">Notre Histoire</a>
+                        <a class="text-text-muted hover:text-primary-dark transition-colors text-sm font-medium tracking-wide"
+                            href="#">Contact</a>
+                    </nav>
+                    <button
+                        class="flex items-center justify-center h-10 px-6 bg-primary hover:bg-primary-dark text-white text-sm font-bold rounded-lg transition-all transform hover:scale-105 shadow-[0_4px_10px_rgba(242,183,5,0.3)] font-sans">
+                        Commander
+                    </button>
+                </div>
+                <button class="md:hidden text-text-main p-2">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </header>
+        </div>
+    </div>
+    <main class="pt-20">
+        <section class="relative pt-16 pb-12 lg:pt-24 lg:pb-16 px-4 lg:px-8 max-w-7xl mx-auto">
+            <div class="flex flex-col items-center text-center mb-12">
+                <span
+                    class="font-sans text-accent text-xs font-bold uppercase tracking-[0.2em] mb-4 border border-accent/20 px-3 py-1 rounded-full">Authenticité
+                    &amp; Transparence</span>
+                <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium text-text-main leading-none mb-6">
+                    L'Homme derrière<br /><span class="italic text-primary-dark">le Rucher</span>
+                </h1>
+                <div class="h-1 w-24 bg-primary rounded-full mt-2"></div>
+            </div>
+            <div class="relative w-full aspect-[16/9] lg:aspect-[21/9] rounded-xl overflow-hidden shadow-xl group">
+                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-700 z-10">
+                </div>
+                <div class="w-full h-full bg-cover bg-center transition-transform duration-[2s] ease-out group-hover:scale-105"
+                    data-alt="Ahmed the beekeeper inspecting a hive frame with bees in sunlight"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCcvNGgz0D5l81wOQgG8d8XYeClsZHJD4cqMifsiwerO4XpcGXo_XMg9cpx1HwLbBkK2F5QtLAQ6Re-9DUu0ZXrPTjIHUYjpp1tER9BnyXcbB_71ISsYhnUjr6f4Ych3Umny-kcF03LxQFOc0GZZPGeL5W1kDRVODq0i1IzeeQUI0n1pb92RTBim9osse_EfznKsL5Vz7ZuUCjzpiRLz82KaIo8xtow9ncy6MCxlikk5cRqPCoBQagLUmelZmc48aRlPJa1VDrx8uc');">
+                </div>
+                <div class="absolute bottom-6 left-6 lg:bottom-12 lg:left-12 z-20 text-white max-w-lg">
+                    <p class="font-serif text-2xl md:text-3xl italic">"Chaque pot de miel est un pacte silencieux scellé
+                        avec la nature."</p>
+                </div>
+            </div>
+        </section>
+        <section class="py-16 px-4 lg:px-8 max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 lg:gap-20 text-lg leading-relaxed text-text-muted">
+                <div>
+                    <p class="drop-cap mb-6 text-text-main">
+                        Tout a commencé avec une curiosité simple, presque enfantine. Je regardais les abeilles danser
+                        autour des fleurs de lavande dans le jardin de mon grand-père. Ce ballet incessant, précis,
+                        vital, m'a fasciné bien avant que je ne songe à en faire mon métier.
+                    </p>
+                    <p class="mb-6">
+                        Aujourd'hui, Le Rucher d'Ahmed n'est pas une entreprise, c'est un écosystème. Nous ne cherchons
+                        pas le rendement à tout prix. Si une année est difficile pour les colonies, nous acceptons de
+                        produire moins. C'est ce respect radical du vivant qui donne à notre miel sa saveur
+                        incomparable.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <p>
+                        La transparence est notre maître-mot. Contrairement aux miels industriels souvent coupés ou
+                        chauffés, le nôtre est brut. Il passe du cadre à l'extracteur, puis au maturateur, et enfin au
+                        pot. Rien de plus. Pas d'ajout, pas de retrait. Juste l'expression pure d'un terroir à un
+                        instant T.
+                    </p>
+                    <div class="bg-primary/5 border-l-4 border-primary p-6 italic font-serif text-text-main">
+                        "Nous ne sommes pas des exploitants de la nature, mais ses gardiens. L'abeille nous prête son
+                        or, à nous de la protéger en retour."
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-24 bg-background-dark text-background-light relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuACb4vwKahhYOUUk8f5kL4WWdsi8cT7t90MFDnws2XpbxEpWe5oVY4PV4n2PxhpdqpOg6s0NRHOdCjXumx3C0k5JXKnNdCg-8_d2xWqbdqpnq1RRJJA9kqyDFsAzf0D7IOudcWQKX2Td69lSx-tRIB8fH6WINu3m7A4e1xxF5uAsX_odJ4X8tPp4ZP2pBEVfwXamtIaZ5MurjV4hSuqeUDBR2BrWsw0XE5pvmt8wePODo29j-dt_oCDwySISPM78HI2vgbul_J5xew'); background-size: cover; background-position: center;">
+            </div>
+            <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+                <span class="material-symbols-outlined text-6xl text-primary mb-6">format_quote</span>
+                <h2 class="font-serif text-3xl md:text-5xl lg:text-6xl font-medium leading-tight mb-8">
+                    Pour moi, l'apiculture n'est pas un métier, c'est une <span class="text-primary italic">conversation
+                        quotidienne</span> avec le sauvage.
+                </h2>
+                <div class="flex items-center justify-center gap-4">
+                    <div class="h-px w-12 bg-white/30"></div>
+                    <span class="text-accent uppercase tracking-widest font-bold text-sm">Ahmed, Fondateur</span>
+                    <div class="h-px w-12 bg-white/30"></div>
+                </div>
+            </div>
+        </section>
+        <section class="py-24 bg-white bg-paper-texture">
+            <div class="max-w-7xl mx-auto px-4 lg:px-8">
+                <div class="text-center mb-20">
+                    <span class="text-primary-dark font-bold font-serif italic text-xl mb-2 block">Immersion</span>
+                    <h2 class="text-4xl md:text-5xl font-bold text-text-main font-serif">Une journée au Rucher</h2>
+                    <p class="text-text-muted mt-4 max-w-2xl mx-auto">Le rythme de nos journées est dicté par le soleil
+                        et l'activité de la colonie. Voici à quoi ressemble notre quotidien en pleine saison.</p>
+                </div>
+                <div class="relative">
+                    <div class="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-primary/20 -translate-x-1/2">
+                    </div>
+                    <div class="grid lg:grid-cols-2 gap-12 items-center mb-24 relative">
+                        <div class="lg:text-right order-2 lg:order-1">
+                            <div
+                                class="inline-block bg-background-light border border-primary/20 px-4 py-2 rounded-full mb-4 shadow-sm">
+                                <span class="font-bold text-primary-dark flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-lg">wb_twilight</span> 06:00
+                                </span>
+                            </div>
+                            <h3 class="text-3xl font-serif font-bold mb-4 text-text-main">L'Inspection à la Fraîche</h3>
+                            <p class="text-text-muted leading-relaxed">
+                                C'est le moment idéal. L'air est encore frais, les abeilles sont calmes. Nous vérifions
+                                la santé de la reine et l'état du couvain sans perturber l'activité intense qui débutera
+                                avec la chaleur.
+                            </p>
+                        </div>
+                        <div class="relative order-1 lg:order-2 group">
+                            <div
+                                class="absolute -inset-4 bg-accent/10 rounded-2xl rotate-2 group-hover:rotate-1 transition-transform">
+                            </div>
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-lg relative z-10">
+                                <div class="w-full h-full bg-cover bg-center hover:scale-105 transition-transform duration-700"
+                                    data-alt="Golden Lavender Honey Jar on a wooden table with lavender flowers - representing calm morning atmosphere"
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCYkPLxTy8_0jXmFoYa53BEm3W3QISNDYkTf8y20zGEbK7LPL9h8Njm1EHzfHyinaY0lLM8OmyK1oQPQUOht4s6yw4tYre-5DX-aeuYBQ1ZS9YdFMJ2RFdR2A4Dc9kMk26FFpJSuNtUiYD0zcR2zojYdiz6hTAlo1LgtoYTueH5SfXQHyeNoGgqKxiBjKd1KnmYDhm3BLo40p0SP2L3lvgnp93Yq7Py0WwutaJ6yGok8mAngXk1caWgYrDwHxolQb8X7q3et2Dxt9c');">
+                                </div>
+                            </div>
+                            <div
+                                class="hidden lg:block absolute top-1/2 -left-16 w-10 h-10 bg-white border-4 border-primary rounded-full -translate-y-1/2 z-20">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid lg:grid-cols-2 gap-12 items-center mb-24 relative">
+                        <div class="relative order-1 group">
+                            <div
+                                class="absolute -inset-4 bg-primary/10 rounded-2xl -rotate-2 group-hover:-rotate-1 transition-transform">
+                            </div>
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-lg relative z-10">
+                                <div class="w-full h-full bg-cover bg-center hover:scale-105 transition-transform duration-700"
+                                    data-alt="Close up of golden honey dripping from honeycomb with bees"
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuACb4vwKahhYOUUk8f5kL4WWdsi8cT7t90MFDnws2XpbxEpWe5oVY4PV4n2PxhpdqpOg6s0NRHOdCjXumx3C0k5JXKnNdCg-8_d2xWqbdqpnq1RRJJA9kqyDFsAzf0D7IOudcWQKX2Td69lSx-tRIB8fH6WINu3m7A4e1xxF5uAsX_odJ4X8tPp4ZP2pBEVfwXamtIaZ5MurjV4hSuqeUDBR2BrWsw0XE5pvmt8wePODo29j-dt_oCDwySISPM78HI2vgbul_J5xew');">
+                                </div>
+                            </div>
+                            <div
+                                class="hidden lg:block absolute top-1/2 -right-16 w-10 h-10 bg-white border-4 border-primary rounded-full -translate-y-1/2 z-20">
+                            </div>
+                        </div>
+                        <div class="order-2">
+                            <div
+                                class="inline-block bg-background-light border border-primary/20 px-4 py-2 rounded-full mb-4 shadow-sm">
+                                <span class="font-bold text-primary-dark flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-lg">wb_sunny</span> 14:00
+                                </span>
+                            </div>
+                            <h3 class="text-3xl font-serif font-bold mb-4 text-text-main">La Récolte Solaire</h3>
+                            <p class="text-text-muted leading-relaxed">
+                                Sous le soleil de plomb, nous prélevons les cadres de hausse pleins. C'est un travail
+                                physique et exigeant. Nous ne prenons que le surplus, laissant toujours suffisamment de
+                                provisions aux abeilles.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid lg:grid-cols-2 gap-12 items-center relative">
+                        <div class="lg:text-right order-2 lg:order-1">
+                            <div
+                                class="inline-block bg-background-light border border-primary/20 px-4 py-2 rounded-full mb-4 shadow-sm">
+                                <span class="font-bold text-primary-dark flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-lg">hourglass_bottom</span> 18:00
+                                </span>
+                            </div>
+                            <h3 class="text-3xl font-serif font-bold mb-4 text-text-main">L'Or en Pot</h3>
+                            <p class="text-text-muted leading-relaxed">
+                                De retour à la miellerie, l'extraction commence. Le miel coule, doré et parfumé. C'est
+                                l'heure de la mise en pot, un moment de précision pour capturer les arômes avant de
+                                laisser le miel maturer.
+                            </p>
+                        </div>
+                        <div class="relative order-1 lg:order-2 group">
+                            <div
+                                class="absolute -inset-4 bg-background-dark/5 rounded-2xl rotate-2 group-hover:rotate-1 transition-transform">
+                            </div>
+                            <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-lg relative z-10">
+                                <div class="w-full h-full bg-cover bg-center hover:scale-105 transition-transform duration-700"
+                                    data-alt="Clear Acacia Honey Jar with sunlight passing through - representing the final product"
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuApHaDHy9FYFkgLFT3TUuPGN2K1t0S6DpX8OPQ6cEx7S7-2ClONY-zeI6GB15lhh7HSyHWFQrwEmjHtVNs4kFiWjKSjKbnatWE-Aenf5_WOl5OXHOVKcYiuMmQfuC1LWi6HCrIdqOVzOzwWrnHFxRmTblNKe-7x7QiwJCx-C5JcKsYJIPQ9DNdVvN-sRvDj00xIdcb6oU0cJ6-EyY_AS3klaMscuV-sGdiIpJVrSsigSeDaLpmi_kbT3_WrcgE9KHPYzUVFI6Xnyoo');">
+                                </div>
+                            </div>
+                            <div
+                                class="hidden lg:block absolute top-1/2 -left-16 w-10 h-10 bg-white border-4 border-primary rounded-full -translate-y-1/2 z-20">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-24 px-4 lg:px-8 max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                <div>
+                    <h2 class="text-4xl font-bold font-serif text-text-main mb-4">Instants Volés</h2>
+                    <p class="text-text-muted max-w-md">Fragments de vie au rucher, entre technicité et poésie.</p>
+                </div>
+                <a class="group flex items-center gap-2 text-primary-dark font-bold hover:text-primary transition-colors"
+                    href="#">
+                    Suivre nos aventures sur Instagram
+                    <span
+                        class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-[600px] md:h-[500px]">
+                <div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-lg">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Dark Chestnut Honey Jar with rich amber color"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDR4tGQbBo4h9eAnmrFessczw06yz7qKiqB8NiVoZJVhdNG2VQToAIPEldzS-By2knaFU2Y308L8Juov_IbTpz01qRrY0-Ia-6JqftWaukb2tbAMwq_kZHcJXRO9t5cG_PREit3v7uuTYuv1vM144Gkoizw-fCl46ZHKDqZS7-LyN6peu_8TNczQBgtvXmLeY1TpRWy8BT9-jsvmnvajclVGC_bxhdqdE4NkQdH2--8Bf8EQ-HJHd0pos6LRewwDPDMqJAACET87CQ');">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <span class="text-white font-serif text-xl">Texture et Robe</span>
+                    </div>
+                </div>
+                <div class="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-lg">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Lavender honey detail"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCYkPLxTy8_0jXmFoYa53BEm3W3QISNDYkTf8y20zGEbK7LPL9h8Njm1EHzfHyinaY0lLM8OmyK1oQPQUOht4s6yw4tYre-5DX-aeuYBQ1ZS9YdFMJ2RFdR2A4Dc9kMk26FFpJSuNtUiYD0zcR2zojYdiz6hTAlo1LgtoYTueH5SfXQHyeNoGgqKxiBjKd1KnmYDhm3BLo40p0SP2L3lvgnp93Yq7Py0WwutaJ6yGok8mAngXk1caWgYrDwHxolQb8X7q3et2Dxt9c');">
+                    </div>
+                </div>
+                <div
+                    class="md:col-span-1 md:row-span-1 bg-primary text-white p-6 rounded-lg flex flex-col justify-center items-center text-center">
+                    <span class="text-4xl font-serif font-bold mb-2">120+</span>
+                    <span class="text-sm font-medium uppercase tracking-wider">Ruches actives</span>
+                </div>
+                <div class="md:col-span-2 md:row-span-1 relative group overflow-hidden rounded-lg">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Beekeeper portrait detail"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCcvNGgz0D5l81wOQgG8d8XYeClsZHJD4cqMifsiwerO4XpcGXo_XMg9cpx1HwLbBkK2F5QtLAQ6Re-9DUu0ZXrPTjIHUYjpp1tER9BnyXcbB_71ISsYhnUjr6f4Ych3Umny-kcF03LxQFOc0GZZPGeL5W1kDRVODq0i1IzeeQUI0n1pb92RTBim9osse_EfznKsL5Vz7ZuUCjzpiRLz82KaIo8xtow9ncy6MCxlikk5cRqPCoBQagLUmelZmc48aRlPJa1VDrx8uc'); background-position: top center;">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span
+                            class="border border-white text-white px-4 py-2 rounded uppercase text-xs font-bold tracking-widest">Voir
+                            la galerie</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-24 bg-white border-t border-[#e5e0d8] text-center">
+            <div class="max-w-3xl mx-auto px-4">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-text-main mb-6">Goûtez à la différence</h2>
+                <p class="text-lg text-text-muted mb-10 leading-relaxed">
+                    Maintenant que vous connaissez notre histoire, laissez notre miel vous raconter la suite. Une
+                    expérience gustative authentique vous attend.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <button
+                        class="w-full sm:w-auto px-8 py-4 bg-primary hover:bg-primary-dark text-white text-base font-bold rounded-lg transition-all shadow-lg shadow-primary/20 hover:shadow-primary/40 group">
+                        <span class="flex items-center justify-center gap-2">
+                            Visiter la boutique
+                            <span
+                                class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </span>
+                    </button>
+                    <button
+                        class="w-full sm:w-auto px-8 py-4 bg-transparent border-2 border-text-main hover:border-primary text-text-main hover:text-primary text-base font-bold rounded-lg transition-colors">
+                        Nous contacter
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-[#1C1C1C] pt-20 pb-10 border-t border-white/10 text-white">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-3 text-white mb-2">
+                        <div class="w-8 h-8 flex items-center justify-center bg-primary rounded text-white shadow-sm">
+                            <span class="material-symbols-outlined text-lg">hive</span>
+                        </div>
+                        <h2 class="font-serif text-lg font-bold">Le Rucher d'Ahmed</h2>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Miel artisanal récolté avec amour. Nous nous engageons pour une apiculture durable et
+                        respectueuse de l'environnement.
+                    </p>
+                    <div class="flex gap-4 mt-2">
+                        <a class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary hover:text-white transition-colors"
+                            href="#">
+                            <span class="text-xs font-bold">FB</span>
+                        </a>
+                        <a class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary hover:text-white transition-colors"
+                            href="#">
+                            <span class="text-xs font-bold">IG</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-serif font-bold mb-6 text-primary">Navigation</h3>
+                    <ul class="space-y-3">
+                        <li><a class="text-gray-400 hover:text-primary text-sm transition-colors" href="#">Accueil</a>
+                        </li>
+                        <li><a class="text-gray-400 hover:text-primary text-sm transition-colors" href="#">Boutique</a>
+                        </li>
+                        <li><a class="text-gray-400 hover:text-primary text-sm transition-colors" href="#">Notre
+                                Histoire</a></li>
+                        <li><a class="text-gray-400 hover:text-primary text-sm transition-colors" href="#">Blog
+                                Apicole</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-serif font-bold mb-6 text-primary">Informations</h3>
+                    <ul class="space-y-3">
+                        <li><a class="text-gray-400 hover:text-primary text-sm transition-colors" href="#">Contact</a>
+                        </li>
+                        <li><a class="text-gray-400 hover:text-primary text-sm transition-colors" href="#">Livraison
+                                &amp; Retours</a></li>
+                        <li><a class="text-gray-400 hover:text-primary text-sm transition-colors" href="#">Mentions
+                                Légales</a></li>
+                        <li><a class="text-gray-400 hover:text-primary text-sm transition-colors" href="#">CGV</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-serif font-bold mb-6 text-primary">Restez informé</h3>
+                    <p class="text-gray-400 text-sm mb-4">Recevez nos actualités et soyez prévenu des nouvelles
+                        récoltes.</p>
+                    <form class="flex flex-col gap-3">
+                        <input
+                            class="bg-[#2A2A2A] border border-white/10 text-white text-sm rounded-lg px-4 py-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary placeholder-white/30"
+                            placeholder="Votre email" type="email" />
+                        <button
+                            class="bg-primary hover:bg-primary-dark text-white font-bold text-sm py-3 px-4 rounded-lg transition-colors"
+                            type="button">
+                            S'inscrire
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-xs">© 2023 Le Rucher d'Ahmed. Tous droits réservés.</p>
+                <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-accent"></span>
+                    <span class="text-gray-500 text-xs">Site sécurisé</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

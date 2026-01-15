@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CGV - Le Rucher d'Ahmed</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2cc0d",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#221f10", // Darker brown/black for contrast
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#2d2a1d",
+                        "text-main": "#181711",
+                        "text-muted": "#8a8360",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom scrollbar for sidebar if content is long */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #e5e7eb;
+            border-radius: 20px;
+        }
+        .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #4b5563;
+        }
+    </style>
+</head>
+<body class="relative flex flex-col min-h-screen bg-background-light dark:bg-background-dark font-display antialiased overflow-x-hidden transition-colors duration-300">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full bg-surface-light dark:bg-surface-dark border-b border-[#f5f4f0] dark:border-white/10 shadow-sm transition-colors duration-300">
+<div class="flex items-center justify-between px-6 lg:px-10 py-4 max-w-7xl mx-auto w-full">
+<div class="flex items-center gap-4 text-text-main dark:text-white">
+<div class="size-8 text-primary">
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold leading-tight tracking-[-0.015em]">Le Rucher d'Ahmed</h2>
+</div>
+<div class="hidden lg:flex flex-1 justify-end gap-8 items-center">
+<nav class="flex items-center gap-8">
+<a class="text-text-main dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors" href="#">Accueil</a>
+<a class="text-text-main dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors" href="#">Boutique</a>
+<a class="text-text-main dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors" href="#">Notre Histoire</a>
+<a class="text-text-main dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-5 bg-primary hover:bg-yellow-400 text-text-main text-sm font-bold shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+<span>Panier</span>
+</button>
+</div>
+<!-- Mobile Menu Icon (Placeholder for functionality) -->
+<button class="lg:hidden p-2 text-text-main dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content Area -->
+<div class="flex-grow flex justify-center py-8 lg:py-12 px-4 lg:px-8">
+<div class="max-w-7xl w-full flex flex-col lg:flex-row gap-8 xl:gap-16">
+<!-- Sidebar / Table of Contents -->
+<aside class="hidden lg:block w-72 shrink-0">
+<div class="sticky top-28 bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-[#f5f4f0] dark:border-white/5 p-6 flex flex-col gap-6 max-h-[calc(100vh-8rem)] overflow-y-auto custom-scrollbar">
+<div class="flex flex-col gap-1 border-b border-[#f5f4f0] dark:border-white/10 pb-4">
+<h3 class="text-text-main dark:text-white font-bold text-lg">Table des matières</h3>
+<p class="text-text-muted dark:text-gray-400 text-sm">Navigation rapide</p>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary font-medium hover:bg-primary/20 transition-colors group" href="#article-1">
+<span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">description</span>
+<span class="text-sm">Article 1 : Objet</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-main dark:text-gray-300 hover:bg-[#f5f4f0] dark:hover:bg-white/5 transition-colors group" href="#article-2">
+<span class="material-symbols-outlined text-[20px] text-text-muted dark:text-gray-500 group-hover:text-primary transition-colors">package_2</span>
+<span class="text-sm">Article 2 : Produits</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-main dark:text-gray-300 hover:bg-[#f5f4f0] dark:hover:bg-white/5 transition-colors group" href="#article-3">
+<span class="material-symbols-outlined text-[20px] text-text-muted dark:text-gray-500 group-hover:text-primary transition-colors">euro_symbol</span>
+<span class="text-sm">Article 3 : Prix</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-main dark:text-gray-300 hover:bg-[#f5f4f0] dark:hover:bg-white/5 transition-colors group" href="#article-4">
+<span class="material-symbols-outlined text-[20px] text-text-muted dark:text-gray-500 group-hover:text-primary transition-colors">shopping_cart</span>
+<span class="text-sm">Article 4 : Commandes</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-main dark:text-gray-300 hover:bg-[#f5f4f0] dark:hover:bg-white/5 transition-colors group" href="#article-5">
+<span class="material-symbols-outlined text-[20px] text-text-muted dark:text-gray-500 group-hover:text-primary transition-colors">credit_card</span>
+<span class="text-sm">Article 5 : Paiement</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-main dark:text-gray-300 hover:bg-[#f5f4f0] dark:hover:bg-white/5 transition-colors group" href="#article-6">
+<span class="material-symbols-outlined text-[20px] text-text-muted dark:text-gray-500 group-hover:text-primary transition-colors">local_shipping</span>
+<span class="text-sm">Article 6 : Livraison</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-main dark:text-gray-300 hover:bg-[#f5f4f0] dark:hover:bg-white/5 transition-colors group" href="#article-7">
+<span class="material-symbols-outlined text-[20px] text-text-muted dark:text-gray-500 group-hover:text-primary transition-colors">u_turn_left</span>
+<span class="text-sm">Article 7 : Rétractation</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-main dark:text-gray-300 hover:bg-[#f5f4f0] dark:hover:bg-white/5 transition-colors group" href="#article-8">
+<span class="material-symbols-outlined text-[20px] text-text-muted dark:text-gray-500 group-hover:text-primary transition-colors">gavel</span>
+<span class="text-sm">Article 8 : Litiges</span>
+</a>
+</nav>
+<div class="mt-auto pt-4 border-t border-[#f5f4f0] dark:border-white/10">
+<button class="w-full flex items-center justify-center gap-2 rounded-lg h-12 bg-gray-900 dark:bg-primary text-white dark:text-black font-bold text-sm hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">download</span>
+                            Télécharger en PDF
+                        </button>
+</div>
+</div>
+</aside>
+<!-- Main Legal Content -->
+<main class="flex-1 flex flex-col gap-8 max-w-4xl">
+<!-- Page Header -->
+<div class="flex flex-col gap-4 pb-6 border-b border-[#f5f4f0] dark:border-white/10">
+<!-- Breadcrumb -->
+<div class="flex items-center gap-2 text-sm text-text-muted dark:text-gray-400">
+<a class="hover:text-primary" href="#">Accueil</a>
+<span class="material-symbols-outlined text-[12px]">chevron_right</span>
+<span class="text-text-main dark:text-gray-200">CGV</span>
+</div>
+<h1 class="text-3xl md:text-4xl lg:text-5xl font-black text-text-main dark:text-white leading-tight tracking-tight">
+                        Conditions Générales de Vente
+                    </h1>
+<div class="flex items-center gap-2 mt-2">
+<span class="material-symbols-outlined text-primary">calendar_month</span>
+<p class="text-text-muted dark:text-gray-400 text-base font-medium">Mise à jour le 24 Octobre 2023</p>
+</div>
+</div>
+<!-- Preamble -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl p-6 md:p-8 shadow-sm border border-[#f5f4f0] dark:border-white/5">
+<p class="text-text-main dark:text-gray-300 text-base leading-relaxed">
+                        Les présentes conditions de vente sont conclues d’une part par l'entreprise <strong class="text-primary font-bold">Le Rucher d'Ahmed</strong> dont le siège social est situé à 24 Chemin des Abeilles, 13000 Marseille, immatriculée au Registre du Commerce et des Sociétés, et gérant le site <span class="underline decoration-primary/50">lerucherdahmed.fr</span>, et d’autre part, par toute personne physique ou morale souhaitant procéder à un achat via le site internet.
+                    </p>
+</div>
+<!-- Articles -->
+<div class="flex flex-col gap-6">
+<!-- Article 1 -->
+<section class="scroll-mt-32" id="article-1">
+<div class="group">
+<div class="flex items-center gap-3 mb-4">
+<span class="flex items-center justify-center size-8 rounded-full bg-primary/20 text-text-main dark:text-primary font-bold text-sm">1</span>
+<h2 class="text-2xl font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">Article 1 : Objet</h2>
+</div>
+<div class="text-text-main dark:text-gray-300 text-base leading-relaxed space-y-4 pl-0 md:pl-11">
+<p>Les présentes conditions de vente visent à définir les relations contractuelles entre Le Rucher d'Ahmed et l’acheteur et les conditions applicables à tout achat effectué par le biais du site internet Le Rucher d'Ahmed.</p>
+<p>L’acquisition d’un produit à travers le présent site implique une acceptation sans réserve par l’acheteur des présentes conditions de vente dont l’acheteur reconnaît avoir pris connaissance préalablement à sa commande.</p>
+</div>
+</div>
+</section>
+<hr class="border-[#f5f4f0] dark:border-white/5 my-2"/>
+<!-- Article 2 -->
+<section class="scroll-mt-32" id="article-2">
+<div class="group">
+<div class="flex items-center gap-3 mb-4">
+<span class="flex items-center justify-center size-8 rounded-full bg-primary/20 text-text-main dark:text-primary font-bold text-sm">2</span>
+<h2 class="text-2xl font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">Article 2 : Produits</h2>
+</div>
+<div class="text-text-main dark:text-gray-300 text-base leading-relaxed space-y-4 pl-0 md:pl-11">
+<p>Les produits proposés sont ceux qui figurent sur le site <span class="font-medium text-text-main dark:text-white">Le Rucher d'Ahmed</span>, dans la limite des stocks disponibles. L'entreprise se réserve le droit de modifier l’assortiment de produits à tout moment.</p>
+<div class="bg-background-light dark:bg-white/5 p-4 rounded-lg border-l-4 border-primary mt-2">
+<p class="text-sm font-medium italic">Note sur les produits artisanaux : Le miel étant un produit naturel, de légères variations de couleur ou de texture (cristallisation) peuvent survenir et ne constituent pas un défaut.</p>
+</div>
+<p>Chaque produit est présenté sur le site internet sous forme d’un descriptif reprenant ses principales caractéristiques techniques (contenance, origine florale, utilisation).</p>
+</div>
+</div>
+</section>
+<hr class="border-[#f5f4f0] dark:border-white/5 my-2"/>
+<!-- Article 3 -->
+<section class="scroll-mt-32" id="article-3">
+<div class="group">
+<div class="flex items-center gap-3 mb-4">
+<span class="flex items-center justify-center size-8 rounded-full bg-primary/20 text-text-main dark:text-primary font-bold text-sm">3</span>
+<h2 class="text-2xl font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">Article 3 : Prix</h2>
+</div>
+<div class="text-text-main dark:text-gray-300 text-base leading-relaxed space-y-4 pl-0 md:pl-11">
+<p>Les prix figurant sur les fiches produits du catalogue internet sont des prix en Euros (€) toutes taxes comprises (TTC) tenant compte de la TVA applicable au jour de la commande.</p>
+<p>Le Rucher d'Ahmed se réserve le droit de modifier ses prix à tout moment, étant toutefois entendu que le prix figurant au catalogue le jour de la commande sera le seul applicable à l’acheteur. Les prix indiqués ne comprennent pas les frais de livraison, facturés en supplément du prix des produits achetés suivant le montant total de la commande.</p>
+</div>
+</div>
+</section>
+<hr class="border-[#f5f4f0] dark:border-white/5 my-2"/>
+<!-- Article 4 -->
+<section class="scroll-mt-32" id="article-4">
+<div class="group">
+<div class="flex items-center gap-3 mb-4">
+<span class="flex items-center justify-center size-8 rounded-full bg-primary/20 text-text-main dark:text-primary font-bold text-sm">4</span>
+<h2 class="text-2xl font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">Article 4 : Commandes</h2>
+</div>
+<div class="text-text-main dark:text-gray-300 text-base leading-relaxed space-y-4 pl-0 md:pl-11">
+<p>L’acheteur qui souhaite acheter un produit ou un service doit obligatoirement :</p>
+<ul class="list-disc list-inside space-y-2 text-text-muted dark:text-gray-400 marker:text-primary">
+<li>Remplir la fiche d’identification sur laquelle il indiquera toutes les coordonnées demandées ou donner son numéro de client s’il en a un.</li>
+<li>Remplir le bon de commande en ligne en donnant toutes les références des produits ou services choisis.</li>
+<li>Valider sa commande après l’avoir vérifiée.</li>
+<li>Effectuer le paiement dans les conditions prévues.</li>
+<li>Confirmer sa commande et son règlement.</li>
+</ul>
+</div>
+</div>
+</section>
+<hr class="border-[#f5f4f0] dark:border-white/5 my-2"/>
+<!-- Article 5 -->
+<section class="scroll-mt-32" id="article-5">
+<div class="group">
+<div class="flex items-center gap-3 mb-4">
+<span class="flex items-center justify-center size-8 rounded-full bg-primary/20 text-text-main dark:text-primary font-bold text-sm">5</span>
+<h2 class="text-2xl font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">Article 5 : Paiement</h2>
+</div>
+<div class="text-text-main dark:text-gray-300 text-base leading-relaxed space-y-4 pl-0 md:pl-11">
+<p>Le prix est exigible à la commande. Les paiements seront effectués par carte bancaire; ils seront réalisés par le biais du système sécurisé Stripe qui utilise le protocole SSL (Secure Socket Layer) de telle sorte que les informations transmises sont cryptées par un logiciel et qu’aucun tiers ne peut en prendre connaissance au cours du transport sur le réseau.</p>
+<div class="flex gap-4 mt-2">
+<div class="bg-gray-100 dark:bg-white/10 px-3 py-1 rounded text-xs font-semibold uppercase tracking-wider text-gray-600 dark:text-gray-300">Visa</div>
+<div class="bg-gray-100 dark:bg-white/10 px-3 py-1 rounded text-xs font-semibold uppercase tracking-wider text-gray-600 dark:text-gray-300">Mastercard</div>
+<div class="bg-gray-100 dark:bg-white/10 px-3 py-1 rounded text-xs font-semibold uppercase tracking-wider text-gray-600 dark:text-gray-300">Paypal</div>
+</div>
+</div>
+</div>
+</section>
+<hr class="border-[#f5f4f0] dark:border-white/5 my-2"/>
+<!-- Article 7 -->
+<section class="scroll-mt-32" id="article-7">
+<div class="group">
+<div class="flex items-center gap-3 mb-4">
+<span class="flex items-center justify-center size-8 rounded-full bg-primary/20 text-text-main dark:text-primary font-bold text-sm">7</span>
+<h2 class="text-2xl font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">Article 7 : Rétractation</h2>
+</div>
+<div class="text-text-main dark:text-gray-300 text-base leading-relaxed space-y-4 pl-0 md:pl-11">
+<p>Conformément à l’article L121-20 du Code de la consommation, l’acheteur dispose d’un délai de quatorze jours ouvrables à compter de la livraison de leur commande pour exercer son droit de rétractation et ainsi faire retour du produit au vendeur pour échange ou remboursement sans pénalité, à l’exception des frais de retour.</p>
+<div class="bg-red-50 dark:bg-red-900/10 border border-red-100 dark:border-red-900/30 rounded-lg p-4">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-red-600 dark:text-red-400 mt-0.5">warning</span>
+<div class="flex flex-col gap-1">
+<p class="font-bold text-red-900 dark:text-red-200 text-sm">Exception pour les denrées périssables</p>
+<p class="text-red-800 dark:text-red-300 text-sm">Attention, conformément aux dispositions légales, ce droit ne s'applique pas aux produits susceptibles de se détériorer ou de se périmer rapidement (tels que certains pots ouverts ou produits frais).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<hr class="border-[#f5f4f0] dark:border-white/5 my-2"/>
+<!-- Article 8 -->
+<section class="scroll-mt-32 mb-10" id="article-8">
+<div class="group">
+<div class="flex items-center gap-3 mb-4">
+<span class="flex items-center justify-center size-8 rounded-full bg-primary/20 text-text-main dark:text-primary font-bold text-sm">8</span>
+<h2 class="text-2xl font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">Article 8 : Litiges</h2>
+</div>
+<div class="text-text-main dark:text-gray-300 text-base leading-relaxed space-y-4 pl-0 md:pl-11">
+<p>Les présentes conditions de vente à distance sont soumises à la loi française. En cas de litige ou de réclamation, l'acheteur s'adressera en priorité au vendeur pour obtenir une solution amiable.</p>
+<p>A défaut, tout litige relatif à l'interprétation et à l'exécution des présentes CGV sera de la compétence exclusive des tribunaux français.</p>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+</div>
+<!-- Footer -->
+<footer class="border-t border-[#f5f4f0] dark:border-white/10 bg-white dark:bg-surface-dark py-12 mt-auto">
+<div class="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col md:flex-row justify-between items-start gap-8">
+<div class="flex flex-col gap-4 max-w-sm">
+<div class="flex items-center gap-2">
+<div class="size-6 text-primary">
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<span class="font-bold text-text-main dark:text-white">Le Rucher d'Ahmed</span>
+</div>
+<p class="text-sm text-text-muted dark:text-gray-400">Des miels d'exception récoltés avec passion dans le respect des abeilles et de la nature.</p>
+</div>
+<div class="flex flex-wrap gap-12">
+<div class="flex flex-col gap-3">
+<h4 class="font-bold text-text-main dark:text-white text-sm uppercase tracking-wider">Légal</h4>
+<a class="text-sm text-text-muted dark:text-gray-400 hover:text-primary transition-colors" href="#">Mentions Légales</a>
+<a class="text-sm text-text-muted dark:text-gray-400 hover:text-primary transition-colors" href="#">Politique de Confidentialité</a>
+<a class="text-sm text-text-main dark:text-white font-medium hover:text-primary transition-colors" href="#">CGV</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-bold text-text-main dark:text-white text-sm uppercase tracking-wider">Contact</h4>
+<p class="text-sm text-text-muted dark:text-gray-400">contact@lerucherdahmed.fr</p>
+<p class="text-sm text-text-muted dark:text-gray-400">+33 6 12 34 56 78</p>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 lg:px-10 mt-12 pt-8 border-t border-[#f5f4f0] dark:border-white/5 text-center md:text-left">
+<p class="text-xs text-text-muted dark:text-gray-500">© 2023 Le Rucher d'Ahmed. Tous droits réservés.</p>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Notre Histoire - Le Rucher d'Ahmed</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#F2B705", // Jaune miel
+                    "primary-dark": "#D98E04", // Ambre doré
+                    "accent": "#6B8E23", // Vert naturel
+                    "background-light": "#FAF7F2", // Blanc cassé
+                    "background-dark": "#1C1C1C", // Noir profond
+                    "surface-light": "#FFFFFF", 
+                    "surface-dark": "#2A2A2A", 
+                    "text-main": "#1C1C1C", 
+                    "text-light": "#FAF7F2", 
+                    "text-muted": "#555555", 
+                    "text-muted-light": "#cccccc", 
+                },
+                fontFamily: {
+                    "display": ["Plus Jakarta Sans", "sans-serif"]
+                },
+            },
+        },
+    }
+</script>
+<style>
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+</style>
+</head>
+<body class="font-display bg-background-light text-text-main overflow-x-hidden selection:bg-primary selection:text-white">
+<div class="fixed top-0 left-0 right-0 z-50 w-full bg-background-light/90 backdrop-blur-md border-b border-[#e5e0d8]">
+<div class="max-w-7xl mx-auto px-4 lg:px-8">
+<header class="flex items-center justify-between h-20">
+<div class="flex items-center gap-3 text-text-main">
+<div class="w-10 h-10 flex items-center justify-center bg-primary rounded-lg text-white shadow-sm">
+<span class="material-symbols-outlined text-2xl">hive</span>
+</div>
+<h2 class="text-text-main text-xl font-bold tracking-tight">Le Rucher d'Ahmed</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end items-center gap-8">
+<nav class="flex items-center gap-8">
+<a class="text-text-muted hover:text-primary-dark transition-colors text-sm font-semibold" href="#">Accueil</a>
+<a class="text-text-muted hover:text-primary-dark transition-colors text-sm font-semibold" href="#">Notre Miel</a>
+<a class="text-text-main hover:text-primary-dark transition-colors text-sm font-semibold" href="#">Notre Histoire</a>
+<a class="text-text-muted hover:text-primary-dark transition-colors text-sm font-semibold" href="#">Contact</a>
+</nav>
+<button class="flex items-center justify-center h-10 px-6 bg-primary hover:bg-primary-dark text-white text-sm font-bold rounded-lg transition-all transform hover:scale-105 shadow-[0_4px_10px_rgba(242,183,5,0.3)]">
+                    Commander
+                </button>
+</div>
+<button class="md:hidden text-text-main p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row pt-20 min-h-screen">
+<div class="w-full lg:w-1/2 h-[50vh] lg:h-[calc(100vh-80px)] lg:sticky lg:top-20 bg-background-dark relative overflow-hidden order-1 shadow-2xl z-10">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuACb4vwKahhYOUUk8f5kL4WWdsi8cT7t90MFDnws2XpbxEpWe5oVY4PV4n2PxhpdqpOg6s0NRHOdCjXumx3C0k5JXKnNdCg-8_d2xWqbdqpnq1RRJJA9kqyDFsAzf0D7IOudcWQKX2Td69lSx-tRIB8fH6WINu3m7A4e1xxF5uAsX_odJ4X8tPp4ZP2pBEVfwXamtIaZ5MurjV4hSuqeUDBR2BrWsw0XE5pvmt8wePODo29j-dt_oCDwySISPM78HI2vgbul_J5xew');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 right-0 p-8 lg:p-16 text-white">
+<span class="material-symbols-outlined text-5xl lg:text-7xl opacity-80 mb-6 text-primary block">format_quote</span>
+<p class="text-2xl lg:text-4xl font-serif font-medium leading-snug max-w-lg drop-shadow-md">
+                L'abeille est au cœur de tout. Mon rôle est simplement de l'écouter et de la protéger.
+            </p>
+<div class="mt-8 flex items-center gap-4">
+<div class="w-12 h-1 bg-primary rounded-full"></div>
+<p class="font-bold text-lg text-primary-dark">Ahmed, Apiculteur</p>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-1/2 bg-background-light order-2">
+<div class="px-6 py-16 lg:p-24 max-w-2xl mx-auto">
+<section class="mb-24">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 w-fit mb-8 animate-fade-in">
+<span class="text-primary-dark text-xs font-bold uppercase tracking-wide">Notre Philosophie</span>
+</div>
+<h1 class="text-4xl lg:text-6xl font-extrabold text-text-main mb-8 leading-[1.1]">
+                    Une histoire de <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-dark">passion et de respect</span>
+</h1>
+<p class="text-xl text-text-main font-medium leading-relaxed mb-6">
+                    Tout a commencé il y a dix ans, non pas par une envie de produire du miel, mais par une fascination pour le monde complexe et merveilleux des abeilles.
+                </p>
+<p class="text-lg text-text-muted leading-relaxed">
+                    Ahmed, fondateur du Rucher, a d'abord installé une ruche au fond de son jardin pour observer. Ce qui n'était qu'une curiosité est devenu une vocation. Aujourd'hui, Le Rucher d'Ahmed n'est pas une exploitation industrielle. C'est un lieu de vie, d'apprentissage et de partage, où la nature dicte son rythme.
+                </p>
+</section>
+<section class="mb-24 relative">
+<div class="absolute -left-12 top-0 bottom-0 w-1 bg-gradient-to-b from-accent/0 via-accent/30 to-accent/0 hidden lg:block"></div>
+<h2 class="text-3xl font-bold text-text-main mb-8 flex items-center gap-4">
+<span class="w-12 h-12 rounded-full bg-accent text-white flex items-center justify-center shadow-lg shadow-accent/20">
+<span class="material-symbols-outlined text-2xl">volunteer_activism</span>
+</span>
+                    Le Respect de l'Abeille
+                </h2>
+<div class="space-y-6 text-lg text-text-muted">
+<p>
+                        Au Rucher d'Ahmed, nous pratiquons une apiculture <strong>sédentaire et douce</strong>. Contrairement aux méthodes intensives qui déplacent les ruches sur des centaines de kilomètres, nos abeilles restent sur leur territoire, évitant stress et épuisement.
+                    </p>
+<p>
+                        Le principe est simple : <strong>nous ne prélevons que le strict nécessaire.</strong> Le miel est avant tout la réserve d'hiver de la colonie. Nous ne récoltons que le surplus, garantissant ainsi que nos abeilles passent la saison froide avec leurs propres provisions.
+                    </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10">
+<div class="bg-white p-6 rounded-2xl border border-primary/10 shadow-sm hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-primary text-3xl mb-2">no_crash</span>
+<h4 class="font-bold text-text-main text-lg">Transhumance Limitée</h4>
+<p class="text-sm text-text-muted mt-1">Pour réduire le stress des colonies.</p>
+</div>
+<div class="bg-white p-6 rounded-2xl border border-accent/10 shadow-sm hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-accent text-3xl mb-2">spa</span>
+<h4 class="font-bold text-text-main text-lg">Soins Naturels</h4>
+<p class="text-sm text-text-muted mt-1">Zéro antibiotique, traitements bio.</p>
+</div>
+</div>
+</section>
+<section class="mb-24">
+<h2 class="text-3xl font-bold text-text-main mb-12">Les grandes étapes</h2>
+<div class="relative border-l-2 border-[#e5e0d8] ml-4 space-y-12">
+<div class="relative pl-10">
+<span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-primary ring-4 ring-background-light"></span>
+<span class="text-sm font-bold text-primary-dark tracking-wide uppercase">2012</span>
+<h3 class="text-xl font-bold text-text-main mt-1 mb-2">La première ruche</h3>
+<p class="text-text-muted text-base leading-relaxed">
+                            Installation de la première colonie au fond du jardin. Une année d'observation et d'apprentissage autodidacte pour comprendre le langage de la ruche.
+                        </p>
+</div>
+<div class="relative pl-10">
+<span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-gray-300 ring-4 ring-background-light group-hover:bg-primary transition-colors"></span>
+<span class="text-sm font-bold text-primary-dark tracking-wide uppercase">2015</span>
+<h3 class="text-xl font-bold text-text-main mt-1 mb-2">Ancrage à Cherves-Richemont</h3>
+<p class="text-text-muted text-base leading-relaxed">
+                            Découverte de ce terroir exceptionnel. Le rucher s'agrandit pour atteindre 20 ruches sédentaires, nichées entre bois et prairies.
+                        </p>
+</div>
+<div class="relative pl-10">
+<span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-gray-300 ring-4 ring-background-light"></span>
+<span class="text-sm font-bold text-primary-dark tracking-wide uppercase">2019</span>
+<h3 class="text-xl font-bold text-text-main mt-1 mb-2">Reconnaissance du savoir-faire</h3>
+<p class="text-text-muted text-base leading-relaxed">
+                            Notre miel de Châtaignier est primé pour son caractère unique lors du concours régional des miels. Une fierté pour toute l'équipe.
+                        </p>
+</div>
+<div class="relative pl-10">
+<span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-accent ring-4 ring-background-light shadow-lg shadow-accent/20"></span>
+<span class="text-sm font-bold text-accent tracking-wide uppercase">2023</span>
+<h3 class="text-xl font-bold text-text-main mt-1 mb-2">Certification Bio</h3>
+<p class="text-text-muted text-base leading-relaxed">
+                            L'aboutissement logique de nos efforts pour une apiculture propre, saine et durable. 100% de notre production est désormais certifiée.
+                        </p>
+</div>
+</div>
+</section>
+<section class="mb-16">
+<div class="bg-white rounded-3xl p-1 border border-[#e5e0d8] shadow-xl shadow-gray-200/50">
+<div class="bg-background-light rounded-[20px] p-8 relative overflow-hidden">
+<div class="absolute top-0 right-0 opacity-5">
+<span class="material-symbols-outlined text-[150px]">hexagon</span>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-4 text-accent">
+<span class="material-symbols-outlined">landscape</span>
+<span class="font-bold uppercase text-xs tracking-wider">Notre Terroir</span>
+</div>
+<h2 class="text-3xl font-bold text-text-main mb-4">Cherves-Richemont</h2>
+<p class="text-text-muted mb-8 leading-relaxed">
+                                Situés entre les vignobles de Cognac et les forêts denses, nos ruchers profitent d'une biodiversité exceptionnellement riche. Les acacias sauvages, les châtaigniers centenaires et les fleurs des champs offrent à nos abeilles une variété de nectars qui donne à nos miels leur complexité aromatique.
+                            </p>
+<div class="relative aspect-video rounded-xl overflow-hidden shadow-md">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCcvNGgz0D5l81wOQgG8d8XYeClsZHJD4cqMifsiwerO4XpcGXo_XMg9cpx1HwLbBkK2F5QtLAQ6Re-9DUu0ZXrPTjIHUYjpp1tER9BnyXcbB_71ISsYhnUjr6f4Ych3Umny-kcF03LxQFOc0GZZPGeL5W1kDRVODq0i1IzeeQUI0n1pb92RTBim9osse_EfznKsL5Vz7ZuUCjzpiRLz82KaIo8xtow9ncy6MCxlikk5cRqPCoBQagLUmelZmc48aRlPJa1VDrx8uc'); filter: contrast(1.1);"></div>
+<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+<p class="text-white text-xs font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-primary">photo_camera</span>
+                                        Inspection des cadres au lever du jour
+                                    </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="py-10 border-t border-[#e5e0d8] text-center lg:text-left">
+<h3 class="text-2xl font-bold text-text-main mb-3">Soutenez une apiculture locale</h3>
+<p class="text-text-muted mb-6">Chaque pot de miel que vous achetez nous aide à maintenir nos colonies en bonne santé.</p>
+<a class="inline-flex items-center justify-center h-14 px-8 bg-primary hover:bg-primary-dark text-white font-bold rounded-xl transition-all shadow-lg shadow-primary/20 hover:shadow-primary/40 gap-2 group w-full sm:w-auto" href="#">
+<span>Découvrir la boutique</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<footer class="mt-16 pt-8 border-t border-[#e5e0d8]">
+<div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-text-muted">
+<p>© 2023 Le Rucher d'Ahmed.</p>
+<div class="flex gap-4">
+<a class="hover:text-primary transition-colors" href="#">Mentions légales</a>
+<a class="hover:text-primary transition-colors" href="#">Confidentialité</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</div>
+
+</body></html>

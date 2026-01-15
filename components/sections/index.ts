@@ -10,3 +10,8 @@ export { RuchersHero } from "./RuchersHero";
 export { RuchersBenefits } from "./RuchersBenefits";
 export { TerroirDetails } from "./TerroirDetails";
 export { MapSection } from "./MapSection";
+export { StoryHero } from "./StoryHero";
+export { ChapterStorySection } from "./ChapterStorySection";
+export { ApicultureFeaturesSection } from "./ApicultureFeaturesSection";
+export { ProcessTimelineSection } from "./ProcessTimelineSection";
+export { RucherGallerySection } from "./RucherGallerySection";

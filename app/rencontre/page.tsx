@@ -15,7 +15,6 @@ export default function RencontresPage() {
             <PageHeader
                 title="Nos Rencontres"
                 description="Plongez dans l'univers du Rucher d'Ahmed à travers nos histoires et rencontres"
-                backgroundImage="/images/ruchers/hero-bg.jpg"
             />
 
             <section className="py-20 bg-background-light">

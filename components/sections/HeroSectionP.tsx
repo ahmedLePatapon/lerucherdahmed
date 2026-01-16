@@ -1,4 +1,4 @@
-import React from "react";
+import { History } from "lucide-react";
 
 export interface HeroSectionProps {
     badge?: string;
@@ -16,7 +16,7 @@ export function HeroSectionP({
     date = "24 Octobre 2023",
 }: HeroSectionProps) {
     return (
-        <section className="relative overflow-hidden rounded-2xl bg-white bg-primary/10 p-8 md:p-12 border border-gray-200 mb-8">
+        <section className="relative overflow-hidden rounded-2xl bg-white p-8 md:p-12 border border-gray-200 mb-8">
             {/* Background Pattern */}
             <div className="absolute top-0 right-0 -mt-10 -mr-10 h-64 w-64 rounded-full bg-primary/10 blur-3xl" />
             <div className="relative z-10 flex flex-col gap-4">
@@ -31,7 +31,9 @@ export function HeroSectionP({
                     {description}
                 </p>
                 <div className="mt-4 flex items-center gap-2 text-sm text-gray-500">
-                    <span className="material-symbols-outlined text-[18px]">update</span>
+                    {/* change l'icon par un icon lucide */}
+
+                    <History className="text-[18px]" />
                     <span>Dernière mise à jour : {date}</span>
                 </div>
             </div>

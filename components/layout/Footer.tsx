@@ -18,7 +18,7 @@ const navigationLinks = [
 const infoLinks = [
     { label: "Livraison", href: "#" },
     { label: "Conditions générales", href: "#" },
-    { label: "Politique de confidentialité", href: "#" },
+    { label: "Politique de confidentialité", href: "/politique-de-confidentialite" },
     { label: "Mentions légales", href: "#" },
 ];
 

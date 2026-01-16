@@ -1,0 +1,72 @@
+// Page Politique de Confidentialité - Le Rucher d'Ahmed
+import { HeroSection } from "@/components/sections/HeroSection"
+import { Accordion } from "@/components/ui/Accordion"
+import { InfoCard } from "@/components/ui/InfoCard"
+import { CookiePreferences } from "@/components/sections/CookiePreferences"
+import { RightsList } from "@/components/sections/RightsList"
+import { ContactDPO } from "@/components/sections/ContactDPO"
+import { Footer } from "@/components/layout/Footer"
+import { TableOfContents } from "@/components/sections/TableOfContents"
+
+export const metadata = {
+    title: "Politique de Confidentialité - Le Rucher d'Ahmed",
+    description:
+        "Découvrez comment nous protégeons vos données personnelles lorsque vous dégustez nos miels.",
+}
+
+export default function PolitiqueConfidentialitePage() {
+    return (
+        <div className="grow">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 lg:py-20">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 py-10 lg:py-20">
+                    <aside className="lg:col-span-3 hidden lg:block">
+                        <TableOfContents />
+                    </aside>
+                    <main className="lg:col-span-9 flex flex-col gap-12">
+                        <HeroSection
+                            badge="Légal"
+                            title="Politique de"
+                            highlight="Confidentialité"
+                            description="Chez Le Rucher d'Ahmed, la transparence est notre priorité. Découvrez comment nous protégeons vos données personnelles lorsque vous dégustez nos miels."
+                            date="24 Octobre 2023"
+                        />
+                        {/* Intro */}
+                        <div className="prose max-w-none">
+                            <p className="text-lg leading-relaxed text-gray-800">
+                                Cette politique de confidentialité décrit les pratiques de <strong className="text-brand-main">Le Rucher d'Ahmed SARL</strong> concernant la collecte, l'utilisation et la divulgation de vos informations que nous recueillons lorsque vous utilisez notre site web. En accédant au service, vous consentez à la collecte et à l'utilisation de vos informations conformément à cette politique de confidentialité.
+                            </p>
+                        </div>
+                        {/* Accordéons collecte des données */}
+                        <section id="data-collection">
+                            <Accordion />
+                        </section>
+                        {/* Finalités du traitement */}
+                        <section id="data-usage">
+                            <div className="mb-6 border-l-4 border-primary pl-4">
+                                <h2 className="text-2xl font-bold text-brand-main">2. Finalités du traitement</h2>
+                            </div>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <InfoCard type="order" />
+                                <InfoCard type="support" />
+                                <InfoCard type="marketing" />
+                                <InfoCard type="analytics" />
+                            </div>
+                        </section>
+                        {/* Cookies */}
+                        <section id="cookies">
+                            <CookiePreferences />
+                        </section>
+                        {/* Droits RGPD */}
+                        <section id="rights">
+                            <RightsList />
+                        </section>
+                        {/* Contact DPO */}
+                        <section id="contact">
+                            <ContactDPO />
+                        </section>
+                    </main>
+                </div>
+            </div>
+        </div>
+    )
+}

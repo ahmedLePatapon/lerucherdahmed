@@ -19,7 +19,7 @@ const infoLinks = [
     { label: "Livraison", href: "#" },
     { label: "Conditions générales", href: "#" },
     { label: "Politique de confidentialité", href: "/politique-de-confidentialite" },
-    { label: "Mentions légales", href: "#" },
+    { label: "Mentions légales", href: "/mentions-legales" },
 ];
 
 export function Footer() {

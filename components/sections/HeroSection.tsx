@@ -2,7 +2,22 @@ import Link from "next/link";
 import { ArrowRight, Leaf, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
-export function HeroSection() {
+export interface HeroSectionProps {
+    badge?: string;
+    title: string;
+    highlight?: string;
+    backgroundImage?: string;
+    description: string;
+    date?: string;
+}
+
+export function HeroSection({
+    badge = "Nouvelle récolte disponible",
+    title = "L'Or de la Nature, ",
+    highlight = "Directement de la Ruche",
+    backgroundImage,
+    description,
+}: HeroSectionProps) {
     return (
         <section className="relative min-h-screen flex items-center pt-20 bg-background-dark">
             <div className="absolute inset-0 z-0">
@@ -10,8 +25,7 @@ export function HeroSection() {
                 <div
                     className="w-full h-full bg-cover bg-center"
                     style={{
-                        backgroundImage:
-                            "url('https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=1920&q=80')",
+                        backgroundImage: `url(${backgroundImage})`,
                     }}
                 />
             </div>
@@ -19,16 +33,16 @@ export function HeroSection() {
             <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 w-full py-20">
                 <div className="max-w-2xl flex flex-col gap-8">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 backdrop-blur-md w-fit">
-                        <span className="w-2 h-2 rounded-full bg-primary animate-pulse-dot" />
-                        <span className="text-primary text-xs font-bold uppercase tracking-wide">Nouvelle récolte disponible</span>
+                        <span className="flex w-2 h-2 rounded-full bg-primary animate-pulse-dot" />
+                        <span className="text-primary text-xs font-bold uppercase tracking-wide">{badge}</span>
                     </div>
 
                     <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight drop-shadow-lg">
-                        L&apos;Or de la Nature, <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-primary-dark">Directement de la Ruche</span>
+                        {title} <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-primary-dark">{highlight}</span>
                     </h1>
 
                     <p className="text-lg md:text-xl text-text-light/90 font-semibold max-w-xl drop-shadow-md">
-                        Miel artisanal 100% local produit par Le Rucher d&apos;Ahmed. Découvrez l&apos;authenticité de nos saveurs et soutenez une apiculture durable.
+                        {description}
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4">

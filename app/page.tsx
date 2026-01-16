@@ -37,7 +37,13 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <HeroSection />
+      <HeroSection
+        badge="Légal"
+        title="L'Or de la Nature, "
+        highlight="Directement de la Ruche"
+        backgroundImage="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=1920&q=80"
+        description="Miel artisanal 100% local produit par Le Rucher d'Ahmed. Découvrez l'authenticité de nos saveurs et soutenez une apiculture durable."
+      />
       <FeaturesSection />
       <ProductsGrid />
       <StorySection />

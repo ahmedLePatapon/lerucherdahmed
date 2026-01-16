@@ -1,5 +1,6 @@
 // Carte réutilisable pour les finalités du traitement
 import { ReactNode } from "react";
+import { ShoppingBag, Headset, Mail, BarChart2 } from "lucide-react";
 
 interface InfoCardProps {
     type: "order" | "support" | "marketing" | "analytics";
@@ -12,22 +13,22 @@ const cardData: Record<InfoCardProps["type"], {
     bg?: string;
 }> = {
     order: {
-        icon: <span className="material-symbols-outlined">shopping_bag</span>,
+        icon: <ShoppingBag size={28} />,
         title: "Traitement des commandes",
         description: "Gestion des commandes, des paiements, des livraisons et des factures. Base légale : Exécution du contrat.",
     },
     support: {
-        icon: <span className="material-symbols-outlined">support_agent</span>,
+        icon: <Headset size={28} />,
         title: "Service Client",
         description: "Répondre à vos demandes de contact, gérer les réclamations et le suivi après-vente.",
     },
     marketing: {
-        icon: <span className="material-symbols-outlined">mail</span>,
+        icon: <Mail size={28} />,
         title: "Marketing & Newsletter",
         description: "Envoi d'offres promotionnelles et de nouveautés sur nos miels, uniquement si vous y avez consenti.",
     },
     analytics: {
-        icon: <span className="material-symbols-outlined">analytics</span>,
+        icon: <BarChart2 size={28} />,
         title: "Amélioration du site",
         description: "Analyses statistiques pour comprendre l'utilisation du site et améliorer l'expérience utilisateur.",
     },
@@ -36,7 +37,7 @@ const cardData: Record<InfoCardProps["type"], {
 export function InfoCard({ type }: InfoCardProps) {
     const { icon, title, description } = cardData[type];
     return (
-        <div className="rounded-xl bg-white p-6 border border-surface-border">
+        <div className="rounded-xl bg-white p-6 border border-surface-border border-gray-200">
             <div className="mb-4 inline-flex items-center justify-center rounded-lg bg-primary/10 p-2 text-primary">
                 {icon}
             </div>

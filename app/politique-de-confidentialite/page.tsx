@@ -1,12 +1,11 @@
 // Page Politique de Confidentialité - Le Rucher d'Ahmed
-import { HeroSection } from "@/components/sections/HeroSection"
 import { Accordion } from "@/components/ui/Accordion"
 import { InfoCard } from "@/components/ui/InfoCard"
 import { CookiePreferences } from "@/components/sections/CookiePreferences"
 import { RightsList } from "@/components/sections/RightsList"
 import { ContactDPO } from "@/components/sections/ContactDPO"
-import { Footer } from "@/components/layout/Footer"
 import { TableOfContents } from "@/components/sections/TableOfContents"
+import { HeroSectionP } from "@/components/sections/HeroSectionP"
 
 export const metadata = {
     title: "Politique de Confidentialité - Le Rucher d'Ahmed",
@@ -18,12 +17,12 @@ export default function PolitiqueConfidentialitePage() {
     return (
         <div className="grow">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 lg:py-20">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 py-10 lg:py-20">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 py-10 lg:py-20 scroll-mt-28" id="introduction">
                     <aside className="lg:col-span-3 hidden lg:block">
                         <TableOfContents />
                     </aside>
                     <main className="lg:col-span-9 flex flex-col gap-12">
-                        <HeroSection
+                        <HeroSectionP
                             badge="Légal"
                             title="Politique de"
                             highlight="Confidentialité"
@@ -37,11 +36,11 @@ export default function PolitiqueConfidentialitePage() {
                             </p>
                         </div>
                         {/* Accordéons collecte des données */}
-                        <section id="data-collection">
+                        <section id="data-collection" className="scroll-mt-28">
                             <Accordion />
                         </section>
                         {/* Finalités du traitement */}
-                        <section id="data-usage">
+                        <section id="data-usage" className="scroll-mt-28">
                             <div className="mb-6 border-l-4 border-primary pl-4">
                                 <h2 className="text-2xl font-bold text-brand-main">2. Finalités du traitement</h2>
                             </div>
@@ -53,15 +52,15 @@ export default function PolitiqueConfidentialitePage() {
                             </div>
                         </section>
                         {/* Cookies */}
-                        <section id="cookies">
+                        <section id="cookies" className="scroll-mt-28">
                             <CookiePreferences />
                         </section>
                         {/* Droits RGPD */}
-                        <section id="rights">
+                        <section id="rights" className="scroll-mt-28">
                             <RightsList />
                         </section>
                         {/* Contact DPO */}
-                        <section id="contact">
+                        <section id="contact" className="scroll-mt-28">
                             <ContactDPO />
                         </section>
                     </main>

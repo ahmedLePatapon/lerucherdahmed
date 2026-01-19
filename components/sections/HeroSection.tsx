@@ -12,7 +12,7 @@ export interface HeroSectionProps {
 }
 
 export function HeroSection({
-    badge = "Nouvelle récolte disponible",
+    badge,
     title = "L'Or de la Nature, ",
     highlight = "Directement de la Ruche",
     backgroundImage,
@@ -32,10 +32,14 @@ export function HeroSection({
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 w-full py-20">
                 <div className="max-w-2xl flex flex-col gap-8">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 backdrop-blur-md w-fit">
-                        <span className="flex w-2 h-2 rounded-full bg-primary animate-pulse-dot" />
-                        <span className="text-primary text-xs font-bold uppercase tracking-wide">{badge}</span>
-                    </div>
+                    {
+                        badge && (
+                            < div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 backdrop-blur-md w-fit">
+                                <span className="flex w-2 h-2 rounded-full bg-primary animate-pulse-dot" />
+                                <span className="text-primary text-xs font-bold uppercase tracking-wide">{badge}</span>
+                            </div>
+                        )
+                    }
 
                     <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight drop-shadow-lg">
                         {title} <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-primary-dark">{highlight}</span>
@@ -73,6 +77,6 @@ export function HeroSection({
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 }

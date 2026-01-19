@@ -34,7 +34,7 @@ export function FeaturesSection() {
                             Une apiculture respectueuse des abeilles et de l&apos;environnement pour un produit d&apos;exception,
                             récolté avec patience et passion.
                         </p>
-                        <Link href="#" className="inline-flex items-center text-primary-dark font-bold hover:underline decoration-2 underline-offset-4">
+                        <Link href="/notre-apiculture" className="inline-flex items-center text-primary-dark font-bold hover:underline decoration-2 underline-offset-4">
                             En savoir plus sur notre méthode
                             <span className="ml-1 text-lg"><ArrowRight size={20} /></span>
                         </Link>

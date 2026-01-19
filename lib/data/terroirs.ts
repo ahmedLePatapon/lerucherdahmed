@@ -26,7 +26,7 @@ export const terroirs: Terroir[] = [
             "Proximité des vignobles",
         ],
         flora: ["Vignes", "Acacia", "Fleurs sauvages"],
-        image: "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&q=80",
+        image: "/images/terroir_cherves_richemont.jpg",
     },
     {
         id: "2",
@@ -41,7 +41,23 @@ export const terroirs: Terroir[] = [
             "Biodiversité exceptionnelle",
             "Zone naturelle protégée",
         ],
-        flora: ["Châtaignier", "Forêt", "Ronce"],
-        image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
+        flora: ["Colza", "Tournesol", "Ronce"],
+        image: "/images/terroir_saint_amant_de_boixe.jpg",
+    },
+    {
+        id: "2",
+        name: "Vouharte",
+        location: "Charente",
+        postalCode: "16330",
+        subtitle: "La Vallée de la Touvre",
+        description:
+            "Implantées au cœur d’une vallée verdoyante traversée par la Touvre, nos ruches de Vouharte bénéficient d’un environnement riche et équilibré. Prairies naturelles, haies bocagères et cultures raisonnées offrent aux abeilles une diversité florale idéale pour un miel doux et harmonieux.",
+        characteristics: [
+            "Vallée naturelle préservée",
+            "Prairies et haies bocagères",
+            "Environnement calme et rural",
+        ],
+        flora: ["Cèdre", "Acacia", "Colza"],
+        image: "/images/terroir_vouharte.jpg",
     },
 ];

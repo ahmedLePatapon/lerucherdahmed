@@ -38,7 +38,7 @@ export default function HomePage() {
   return (
     <>
       <HeroSection
-        badge="Légal"
+        // badge="Nouvelle récolte disponible"
         title="L'Or de la Nature, "
         highlight="Directement de la Ruche"
         backgroundImage="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=1920&q=80"

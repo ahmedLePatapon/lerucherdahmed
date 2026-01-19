@@ -2,8 +2,12 @@ export function RuchersHero() {
     return (
         <section className="relative flex min-h-[60vh] w-full flex-col justify-center overflow-hidden">
             <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-gradient-to-b from-neutral-dark/60 via-neutral-dark/40 to-neutral-dark/70 z-10" />
-                <div className="h-full w-full bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('https://picsum.photos/seed/rucher-hero/1600/900')` }} />
+                {/* Image de fond */}
+                <div className="h-full w-full bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(/images/bannier_cognac.jpg)` }} />
+                {/* Overlay sombre pour contraste */}
+                <div className="absolute inset-0 bg-black/50 z-10 pointer-events-none" />
+                {/* Overlay gradient existant */}
+                <div className="absolute inset-0 bg-gradient-to-b from-neutral-dark/60 via-neutral-dark/40 to-neutral-dark/70 z-20 pointer-events-none" />
             </div>
 
             <div className="relative z-20 mx-auto flex w-full max-w-7xl flex-col items-center px-4 py-20 text-center sm:px-6 lg:px-8">

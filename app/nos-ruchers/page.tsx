@@ -15,7 +15,7 @@ export const metadata: Metadata = {
         siteName: "Le Rucher d'Ahmed",
         images: [
             {
-                url: "https://picsum.photos/seed/terroirs/1200/630",
+                url: "/public/banner-terroirs.jpg",
                 width: 1200,
                 height: 630,
                 alt: "Nos ruchers et terroirs",

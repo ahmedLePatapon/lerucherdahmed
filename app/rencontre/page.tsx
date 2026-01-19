@@ -16,7 +16,6 @@ export default function RencontresPage() {
                 title="Nos Rencontres"
                 description="Plongez dans l'univers du Rucher d'Ahmed à travers nos histoires et rencontres"
             />
-
             <section className="py-20 bg-background-light">
                 <div className="max-w-7xl mx-auto px-4 lg:px-8">
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -121,7 +121,7 @@ export function Footer() {
                     <p className="text-text-muted-light text-xs">
                         © {new Date().getFullYear()} Le Rucher d&apos;Ahmed. Tous droits réservés.
                     </p>
-                    <p className="text-text-muted-light text-xs">Fait avec 🐝 en Charente</p>
+                    <p className="text-text-muted-light text-xs">Fait avec ❤️ en Charente</p>
                 </div>
             </div>
         </footer>

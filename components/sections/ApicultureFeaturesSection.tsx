@@ -1,7 +1,7 @@
-import { Leaf, Stethoscope, Scale } from "lucide-react"
+import { Leaf, Stethoscope, Scale, MapPinned } from "lucide-react"
 
-interface FeatureItem {
-    icon: "leaf" | "stethoscope" | "scale"
+export interface FeatureItem {
+    icon: string
     title: string
     description: string
 }
@@ -17,11 +17,12 @@ interface ApicultureFeaturesSectionProps {
 const iconMap = {
     leaf: Leaf,
     stethoscope: Stethoscope,
+    mapPinned: MapPinned,
     scale: Scale,
 }
 
 export function ApicultureFeaturesSection({
-    badge = "Chapitre 2",
+    badge,
     title,
     description,
     features,
@@ -32,9 +33,13 @@ export function ApicultureFeaturesSection({
             <div className="max-w-7xl mx-auto px-4 lg:px-8">
                 {/* En-tête */}
                 <div className="text-center max-w-3xl mx-auto mb-20">
-                    <span className="text-accent font-bold uppercase tracking-wider text-sm mb-3 block">
-                        {badge}
-                    </span>
+                    {
+                        badge && (
+                            <span className="text-primary text-sm font-bold uppercase tracking-wider">
+                                {badge}
+                            </span>
+                        )
+                    }
                     <h2 className="text-4xl md:text-5xl font-serif font-bold text-text-main mb-6">
                         {title}
                     </h2>
@@ -48,7 +53,7 @@ export function ApicultureFeaturesSection({
                 {/* Grille des features */}
                 <div className="grid md:grid-cols-3 gap-12">
                     {features.map((feature, index) => {
-                        const IconComponent = iconMap[feature.icon]
+                        const IconComponent = iconMap[feature.icon as keyof typeof iconMap]
 
                         return (
                             <div key={index} className="flex flex-col items-center text-center group">

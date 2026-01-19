@@ -26,7 +26,7 @@ export interface Rencontre {
         title: string
         description: string
         items: Array<{
-            icon: "leaf" | "stethoscope" | "scale"
+            icon: "leaf" | "stethoscope" | "scale" | "mapPinned"
             title: string
             description: string
         }>
@@ -59,12 +59,22 @@ export interface Rencontre {
         }>
     }
     content?: {
-        sections: Array<{
-            type: 'text' | 'quote' | 'image'
-            content: string
-            author?: string
-            imageUrl?: string
-        }>
+        sections: (
+            | {
+                type: 'text'
+                content: string
+            }
+            | {
+                type: 'quote'
+                content: string
+                author: string
+            }
+            | {
+                type: 'image'
+                imageUrl: string
+                content?: string
+            }
+        )[]
     }
 }
 

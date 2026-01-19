@@ -9,7 +9,7 @@ interface StoryHeroProps {
 
 export function StoryHero({
     backgroundImage = "https://lh3.googleusercontent.com/aida-public/AB6AXuCcvNGgz0D5l81wOQgG8d8XYeClsZHJD4cqMifsiwerO4XpcGXo_XMg9cpx1HwLbBkK2F5QtLAQ6Re-9DUu0ZXrPTjIHUYjpp1tER9BnyXcbB_71ISsYhnUjr6f4Ych3Umny-kcF03LxQFOc0GZZPGeL5W1kDRVODq0i1IzeeQUI0n1pb92RTBim9osse_EfznKsL5Vz7ZuUCjzpiRLz82KaIo8xtow9ncy6MCxlikk5cRqPCoBQagLUmelZmc48aRlPJa1VDrx8uc",
-    badge = "Depuis 2012",
+    badge,
     title = "Une Histoire de Passion,",
     titleHighlight = "au Rythme des Abeilles",
     description = "Découvrez comment un simple amour pour la nature s'est transformé en une vocation : préserver les abeilles et offrir un miel d'une pureté absolue.",

@@ -285,6 +285,8 @@ export function isAuthenticated(): { authenticated: boolean; user?: { id: string
 }
 ```
 
+- [x] Créer `lib/auth.ts` et `components/admin/LoginPrompt.tsx` (si pas déjà créé).
+
 ##### Step 4 Verification Checklist
 - [ ] Pas d'erreurs TypeScript
 - [ ] `/admin` affiche `LoginPrompt` si l'utilisateur n'est pas authentifié

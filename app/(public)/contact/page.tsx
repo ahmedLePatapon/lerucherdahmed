@@ -1,4 +1,4 @@
-import { PageHeader } from "../../components/sections/PageHeader";
+import { PageHeader } from "../../../components/sections/PageHeader";
 import { contactInfo } from "@/lib/data/contact";
 import { Input } from "@/components/ui/Input";
 import { Textarea } from "@/components/ui/Textarea";

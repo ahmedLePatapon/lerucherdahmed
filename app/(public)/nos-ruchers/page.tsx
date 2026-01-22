@@ -1,9 +1,9 @@
 import { Metadata } from "next";
-import { RuchersHero } from "../../components/sections/RuchersHero";
-import { RuchersBenefits } from "../../components/sections/RuchersBenefits";
-import { TerroirDetails } from "../../components/sections/TerroirDetails";
-import { MapSection } from "../../components/sections/MapSection";
-import { CTASection } from "../../components/sections/CTASection";
+import { RuchersHero } from "../../../components/sections/RuchersHero";
+import { RuchersBenefits } from "../../../components/sections/RuchersBenefits";
+import { TerroirDetails } from "../../../components/sections/TerroirDetails";
+import { MapSection } from "../../../components/sections/MapSection";
+import { CTASection } from "../../../components/sections/CTASection";
 
 export const metadata: Metadata = {
     title: "Nos Ruchers — Le Rucher d'Ahmed",

@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import ConditionalShell from "@/components/layout/ConditionalShell";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-sans",
@@ -58,15 +55,7 @@ export default function RootLayout({
       </head>
 
       <body className={`${plusJakartaSans.variable} font-sans`}>
-        <ConditionalShell>
-          <Header />
-        </ConditionalShell>
-
-        <main className="min-h-screen">{children}</main>
-
-        <ConditionalShell>
-          <Footer />
-        </ConditionalShell>
+        {children}
       </body>
     </html>
   );

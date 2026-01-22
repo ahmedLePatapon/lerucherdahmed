@@ -45,8 +45,6 @@ export default function AdminPage() {
 ---
 
 #### Step 2: Ajouter composants UI admin
-- [ ] Créer dossier `components/admin/` si absent
-- [ ] Créer et coller les fichiers ci-dessous:
  - [x] Créer dossier `components/admin/` si absent
  - [x] Créer et coller les fichiers ci-dessous:
 

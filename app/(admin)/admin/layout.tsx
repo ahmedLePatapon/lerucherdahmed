@@ -1,18 +1,14 @@
-// app/admin/layout.tsx
+// app/(admin)/admin/layout.tsx
 import React from 'react';
 
 export const metadata = {
-  title: 'Admin — Le Rucher d\'Ahmed',
+    title: "Admin — Le Rucher d'Ahmed",
 };
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="fr">
-      <body>
+    return (
         <div className="admin-layout" style={{ display: 'flex' }}>
-          {children}
+            {children}
         </div>
-      </body>
-    </html>
-  );
+    );
 }

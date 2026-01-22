@@ -267,6 +267,11 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 ##### Step 3 Verification Checklist
 - [ ] Ouvrir `/admin` et vérifier que le layout admin est utilisé (Header/Footer global absents si c'est le but)
 
+- [x] Si vous préférez un layout admin sans `Header`/`Footer` global, créez `app/admin/layout.tsx`.
+
+##### Step 3 STOP & COMMIT
+**STOP & COMMIT:** Stagez et commitez `app/admin/layout.tsx` si utilisé.
+
 #### Step 3 STOP & COMMIT
 **STOP & COMMIT:** Stagez et commitez `app/admin/layout.tsx` si utilisé.
 

@@ -19,8 +19,6 @@ Convertir la page HTML d'administration en composants Next.js et créer la route
 ### Step-by-Step Instructions
 
 #### Step 1: Ajouter la route admin (page) et placeholder
-- [ ] Créer le fichier `app/admin/page.tsx`.
-- [ ] Copier le code ci‑dessous dans `app/admin/page.tsx`.
  - [x] Créer le fichier `app/admin/page.tsx`.
  - [x] Copier le code ci‑dessous dans `app/admin/page.tsx`.
 
@@ -49,6 +47,8 @@ export default function AdminPage() {
 #### Step 2: Ajouter composants UI admin
 - [ ] Créer dossier `components/admin/` si absent
 - [ ] Créer et coller les fichiers ci-dessous:
+ - [x] Créer dossier `components/admin/` si absent
+ - [x] Créer et coller les fichiers ci-dessous:
 
 1) `components/admin/AdminDashboard.tsx`
 

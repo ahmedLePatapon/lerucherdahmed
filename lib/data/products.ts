@@ -18,6 +18,7 @@ export interface Product {
     specs?: Record<string, string>;
     nutrition?: Record<string, string>;
     apiculteurNote?: string;
+    quantity?: number;
 }
 
 export const products: Product[] = [

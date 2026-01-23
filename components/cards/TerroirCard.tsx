@@ -10,7 +10,7 @@ interface TerroirCardProps {
 export function TerroirCard({ terroir, className }: TerroirCardProps) {
     return (
         <div className={cn("bg-white rounded-2xl overflow-hidden border border-border-light", className)}>
-            <div className="aspect-[4/3] relative bg-gray-100 overflow-hidden">
+            <div className="aspect-4/3 relative bg-gray-100 overflow-hidden">
                 <Image src={terroir.image} alt={terroir.name} fill className="object-cover" />
             </div>
 

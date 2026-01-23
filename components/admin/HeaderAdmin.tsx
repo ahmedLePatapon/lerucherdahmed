@@ -5,9 +5,10 @@ import { Menu } from 'lucide-react';
 
 type Props = {
     onOpenMobile?: () => void;
+    pathname?: string;
 };
 
-export default function HeaderAdmin({ onOpenMobile }: Props): React.ReactElement {
+export default function HeaderAdmin({ onOpenMobile, pathname }: Props): React.ReactElement {
     return (
         <header className="flex items-center justify-between bg-white border-b border-[#e6e4db] dark:border-white/10 px-8 py-4 sticky top-0 z-40">
             <div className="flex items-center gap-4">
@@ -15,7 +16,7 @@ export default function HeaderAdmin({ onOpenMobile }: Props): React.ReactElement
                     <Menu size={20} />
                 </button>
                 <div>
-                    <h2 className="text-sm font-medium">Tableau de bord</h2>
+                    <h2 className="text-xl font-bold">{pathname?.includes('/admin/produits/') ? 'Modifier le Produit' : 'Tableau de bord'}</h2>
                 </div>
             </div>
             <div>

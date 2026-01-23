@@ -7,6 +7,7 @@ import LoginPrompt from './LoginPrompt';
 import { isAuthenticated } from '../../lib/auth';
 import { Banknote, ShoppingCart, Users } from 'lucide-react';
 import { SimpleCard } from '../cards/SimpleCard';
+import Link from 'next/link';
 
 const simpleDashboardItems = [
     {
@@ -57,7 +58,7 @@ export default function AdminDashboard(): React.ReactElement {
                 <div className="lg:col-span-2 space-y-4">
                     <div className="flex items-center justify-between">
                         <h2 className="text-lg font-bold">Produits Récents</h2>
-                        <button className="text-sm text-primary font-bold hover:underline">Voir tout</button>
+                        <Link href="/admin/produits" className="text-sm text-primary font-bold hover:underline">Voir tout</Link>
                     </div>
                     <div
                         className="bg-white rounded-xl border border-[#e6e4db] dark:border-white/10 overflow-hidden shadow-sm">

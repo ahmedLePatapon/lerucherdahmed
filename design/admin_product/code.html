@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Modifier le Produit - Le Rucher d'Ahmed</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ffd400",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#181710",
+                        "surface-dark": "#23200f",
+                        "border-dark": "#3a3727",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen">
+    <div class="flex flex-col lg:flex-row min-h-screen">
+        <!-- Side Navigation -->
+        <aside
+            class="w-full lg:w-64 bg-background-light dark:bg-background-dark border-r border-slate-200 dark:border-border-dark flex flex-col sticky top-0 h-screen overflow-y-auto">
+            <div class="p-6 flex items-center gap-3">
+                <div class="bg-primary text-background-dark p-1.5 rounded-lg">
+                    <span class="material-symbols-outlined block">hive</span>
+                </div>
+                <h2 class="text-lg font-bold tracking-tight">Le Rucher d'Ahmed</h2>
+            </div>
+            <nav class="flex-1 px-4 space-y-1">
+                <div
+                    class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-[#bcb69a] hover:bg-slate-100 dark:hover:bg-surface-dark rounded-lg cursor-pointer">
+                    <span class="material-symbols-outlined">dashboard</span>
+                    <span class="text-sm font-medium leading-normal">Dashboard</span>
+                </div>
+                <div
+                    class="flex items-center gap-3 px-3 py-2 bg-primary/10 text-primary dark:bg-primary/20 rounded-lg cursor-pointer">
+                    <span class="material-symbols-outlined">inventory_2</span>
+                    <span class="text-sm font-medium leading-normal font-bold">Inventory</span>
+                </div>
+                <div
+                    class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-[#bcb69a] hover:bg-slate-100 dark:hover:bg-surface-dark rounded-lg cursor-pointer">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                    <span class="text-sm font-medium leading-normal">Orders</span>
+                </div>
+                <div
+                    class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-[#bcb69a] hover:bg-slate-100 dark:hover:bg-surface-dark rounded-lg cursor-pointer">
+                    <span class="material-symbols-outlined">group</span>
+                    <span class="text-sm font-medium leading-normal">Customers</span>
+                </div>
+                <div
+                    class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-[#bcb69a] hover:bg-slate-100 dark:hover:bg-surface-dark rounded-lg cursor-pointer">
+                    <span class="material-symbols-outlined">analytics</span>
+                    <span class="text-sm font-medium leading-normal">Analytics</span>
+                </div>
+                <div class="pt-4 mt-4 border-t border-slate-200 dark:border-border-dark">
+                    <div
+                        class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-[#bcb69a] hover:bg-slate-100 dark:hover:bg-surface-dark rounded-lg cursor-pointer">
+                        <span class="material-symbols-outlined">settings</span>
+                        <span class="text-sm font-medium leading-normal">Settings</span>
+                    </div>
+                </div>
+            </nav>
+            <div class="p-4 border-t border-slate-200 dark:border-border-dark mt-auto">
+                <div class="flex items-center gap-3">
+                    <div class="size-10 rounded-full bg-slate-300 dark:bg-surface-dark bg-cover bg-center"
+                        data-alt="Admin profile picture"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAjJSTDM4VJ0-m6diSeV0k1C8ncsMacXOYCS0ZrBHLtz57TP8Wvp0CSOglp1jOQslJpapMBK2bgDuLmD6Ljq-Gu2QdwH8lHJeUnuyhRsU0k2fn7BxZHV1V3B0IRRABIIzxZOpHtlXYA3wgsW_QaskEnagpjG3DGyyBXZ-V1ykhEN-im9FsMdhAt8eHJAJtoKa8B1C8CndCAJru-n5CoHCAqQPfzVe5XklQHX5S_5auvCyYCzVMUfCKrMgtxnimPsT5td1cRM3BQG5I");'>
+                    </div>
+                    <div class="flex flex-col">
+                        <p class="text-sm font-bold">Admin Panel</p>
+                        <p class="text-xs text-[#bcb69a]">Product Manager</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- Main Content Area -->
+        <main class="flex-1 flex flex-col min-w-0">
+            <!-- Top Navbar -->
+            <header
+                class="sticky top-0 z-30 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-border-dark px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4 flex-1">
+                        <div class="relative w-full max-w-md hidden md:block">
+                            <span
+                                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 dark:text-[#bcb69a] text-xl">search</span>
+                            <input
+                                class="w-full bg-slate-100 dark:bg-surface-dark border-none rounded-lg pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-primary outline-none"
+                                placeholder="Search products..." type="text" />
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <button
+                            class="flex items-center justify-center rounded-lg px-4 h-10 bg-slate-100 dark:bg-border-dark text-slate-700 dark:text-white text-sm font-bold hover:bg-slate-200 dark:hover:bg-opacity-80">
+                            Cancel
+                        </button>
+                        <button
+                            class="flex items-center justify-center rounded-lg px-6 h-10 bg-primary text-background-dark text-sm font-bold hover:bg-primary/90">
+                            Save Changes
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <!-- Scrollable Content -->
+            <div class="p-6 lg:p-10 space-y-8 max-w-5xl mx-auto w-full">
+                <!-- Breadcrumbs -->
+                <div class="flex flex-wrap gap-2 text-sm font-medium">
+                    <a class="text-slate-400 dark:text-[#bcb69a] hover:text-primary" href="#">Admin</a>
+                    <span class="text-slate-400 dark:text-[#bcb69a]">/</span>
+                    <a class="text-slate-400 dark:text-[#bcb69a] hover:text-primary" href="#">Inventory</a>
+                    <span class="text-slate-400 dark:text-[#bcb69a]">/</span>
+                    <span class="text-slate-900 dark:text-white">Modifier le Produit</span>
+                </div>
+                <!-- Page Heading -->
+                <div class="flex flex-wrap justify-between items-end gap-4">
+                    <div class="space-y-1">
+                        <h1 class="text-3xl lg:text-4xl font-black tracking-tight leading-tight">Miel de Jujubier (Sidr)
+                        </h1>
+                        <p class="text-slate-500 dark:text-[#bcb69a]">Mettez à jour les détails, les spécifications et
+                            les notes d'apiculture.</p>
+                    </div>
+                    <button
+                        class="flex items-center gap-2 rounded-lg px-4 h-10 border border-slate-200 dark:border-border-dark text-sm font-semibold hover:bg-slate-50 dark:hover:bg-surface-dark">
+                        <span class="material-symbols-outlined text-lg">visibility</span>
+                        View Live Product
+                    </button>
+                </div>
+                <!-- Form Sections -->
+                <form class="space-y-8">
+                    <!-- General Information Card -->
+                    <section
+                        class="bg-white dark:bg-surface-dark rounded-xl border border-slate-200 dark:border-border-dark overflow-hidden">
+                        <div
+                            class="px-6 py-4 border-b border-slate-200 dark:border-border-dark bg-slate-50/50 dark:bg-white/5">
+                            <h3 class="text-lg font-bold">Informations Générales</h3>
+                        </div>
+                        <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-sm font-semibold">Nom du Produit</label>
+                                <input
+                                    class="w-full bg-transparent border-slate-200 dark:border-border-dark rounded-lg focus:ring-primary focus:border-primary"
+                                    type="text" value="Miel de Jujubier" />
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-semibold">Slug (URL)</label>
+                                <div class="flex gap-2">
+                                    <input
+                                        class="flex-1 bg-transparent border-slate-200 dark:border-border-dark rounded-lg focus:ring-primary focus:border-primary"
+                                        type="text" value="miel-de-jujubier-royal" />
+                                    <button
+                                        class="p-2 border border-slate-200 dark:border-border-dark rounded-lg hover:bg-slate-100 dark:hover:bg-white/5"
+                                        type="button">
+                                        <span class="material-symbols-outlined">refresh</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-semibold">Prix (DZD)</label>
+                                <input
+                                    class="w-full bg-transparent border-slate-200 dark:border-border-dark rounded-lg focus:ring-primary focus:border-primary"
+                                    type="number" value="4500" />
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-semibold">Badge / Statut</label>
+                                <select
+                                    class="w-full bg-transparent border-slate-200 dark:border-border-dark rounded-lg focus:ring-primary focus:border-primary">
+                                    <option value="none">Aucun</option>
+                                    <option selected="" value="best">Best Seller</option>
+                                    <option value="new">Nouveau</option>
+                                    <option value="promo">Promotion</option>
+                                </select>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Descriptions Card -->
+                    <section
+                        class="bg-white dark:bg-surface-dark rounded-xl border border-slate-200 dark:border-border-dark overflow-hidden">
+                        <div
+                            class="px-6 py-4 border-b border-slate-200 dark:border-border-dark bg-slate-50/50 dark:bg-white/5">
+                            <h3 class="text-lg font-bold">Descriptions</h3>
+                        </div>
+                        <div class="p-6 space-y-6">
+                            <div class="space-y-2">
+                                <label class="text-sm font-semibold">Description Courte</label>
+                                <textarea
+                                    class="w-full bg-transparent border-slate-200 dark:border-border-dark rounded-lg focus:ring-primary focus:border-primary"
+                                    rows="2">Un miel rare et précieux, reconnu pour ses vertus thérapeutiques exceptionnelles.</textarea>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-semibold">Description Détaillée</label>
+                                <textarea
+                                    class="w-full bg-transparent border-slate-200 dark:border-border-dark rounded-lg focus:ring-primary focus:border-primary"
+                                    rows="6">Le miel de jujubier (Sidr) est l'un des miels les plus chers et les plus réputés au monde. Récolté dans les zones arides, il possède un goût boisé unique et une texture onctueuse. Chez Le Rucher d'Ahmed, nous garantissons une récolte traditionnelle respectant l'environnement et l'abeille.</textarea>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Media Upload -->
+                    <section
+                        class="bg-white dark:bg-surface-dark rounded-xl border border-slate-200 dark:border-border-dark overflow-hidden">
+                        <div
+                            class="px-6 py-4 border-b border-slate-200 dark:border-border-dark bg-slate-50/50 dark:bg-white/5">
+                            <h3 class="text-lg font-bold">Médias du Produit</h3>
+                        </div>
+                        <div class="p-6">
+                            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                                <div
+                                    class="aspect-square rounded-lg border-2 border-dashed border-slate-200 dark:border-border-dark flex flex-col items-center justify-center gap-2 hover:border-primary cursor-pointer transition-colors group">
+                                    <span
+                                        class="material-symbols-outlined text-slate-400 group-hover:text-primary">add_photo_alternate</span>
+                                    <span
+                                        class="text-xs font-bold text-slate-400 group-hover:text-primary">Ajouter</span>
+                                </div>
+                                <div class="relative group aspect-square rounded-lg bg-slate-100 dark:bg-background-dark border border-slate-200 dark:border-border-dark bg-cover bg-center overflow-hidden"
+                                    data-alt="Honey jar front view"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD2PO32J3_Xuj-n-WBUILQfiNoaRPpTv4l5LFmW37BOXt4q8Q7AjUJmkUPLqqkCuJso9yrtD-KcthlC7wCUahdA5GPKaLQwkgzKCa6qHrmjjiWmRgdvWvh7wv5wVsDm_3W5b2_dPK1aXgXmtj3Ji4apJZpMRm9A57RF7M7VGduePlAQFAltW-DtYFARkZctYWB8ZU1DwgWAX-0j-a3irv1dAAWzMWBjcC8AIEylildAFkxBvlRku3VO-pYTbNAnEoy3pBei9oU6Rrw");'>
+                                    <div
+                                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-2 transition-opacity">
+                                        <button
+                                            class="p-1.5 bg-red-500 rounded-full text-white hover:scale-110 transition-transform"
+                                            type="button">
+                                            <span class="material-symbols-outlined text-sm">delete</span>
+                                        </button>
+                                        <button
+                                            class="p-1.5 bg-primary text-background-dark rounded-full hover:scale-110 transition-transform"
+                                            type="button">
+                                            <span class="material-symbols-outlined text-sm">visibility</span>
+                                        </button>
+                                    </div>
+                                    <div
+                                        class="absolute top-1 left-1 bg-primary text-[10px] font-bold text-background-dark px-1.5 py-0.5 rounded shadow-sm">
+                                        Principal</div>
+                                </div>
+                                <div class="relative group aspect-square rounded-lg bg-slate-100 dark:bg-background-dark border border-slate-200 dark:border-border-dark bg-cover bg-center overflow-hidden"
+                                    data-alt="Honey dripping from dipper"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAmJ7xsrjcsRnp8qLaLBaTOC73qPp9qZG_dncD2D9VLJWlUbaIsYn54xmWzZtC9oLtUz3yKsJS7Qnh4Z1MPtfa-S8I-hKXCowutZl3G5PdGbbUY3u1W-m9Y7v297rVlVT-QEwVmNm6lzZsWkz_D5Q0GTpzijUJdjJ7mTWCiJaeMwaHUwZkZvXbpUUlX-jO7fTlHH9sDWuYrfrNmEOxwywe26Sy7NmjGQ0SuwRICNTIm9Ft7e_gPUnwNA1K41z-aIR2KnLcT7i7S-dU");'>
+                                    <div
+                                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-2 transition-opacity">
+                                        <button class="p-1.5 bg-red-500 rounded-full text-white" type="button">
+                                            <span class="material-symbols-outlined text-sm">delete</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Product Specs -->
+                    <section
+                        class="bg-white dark:bg-surface-dark rounded-xl border border-slate-200 dark:border-border-dark overflow-hidden">
+                        <div
+                            class="px-6 py-4 border-b border-slate-200 dark:border-border-dark bg-slate-50/50 dark:bg-white/5">
+                            <h3 class="text-lg font-bold">Spécifications Techniques</h3>
+                        </div>
+                        <div class="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-sm font-semibold">Poids (grammes)</label>
+                                <div class="relative">
+                                    <input
+                                        class="w-full bg-transparent border-slate-200 dark:border-border-dark rounded-lg pr-10"
+                                        type="number" value="500" />
+                                    <span
+                                        class="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-bold text-slate-400">g</span>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-semibold">Récolte (Année)</label>
+                                <input class="w-full bg-transparent border-slate-200 dark:border-border-dark rounded-lg"
+                                    type="text" value="2023" />
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-semibold">Saison</label>
+                                <input class="w-full bg-transparent border-slate-200 dark:border-border-dark rounded-lg"
+                                    type="text" value="Automne" />
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-semibold">Profil Gustatif</label>
+                                <input class="w-full bg-transparent border-slate-200 dark:border-border-dark rounded-lg"
+                                    type="text" value="Épicé, Intense, Fruité" />
+                            </div>
+                        </div>
+                    </section>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <!-- Nutrition -->
+                        <section
+                            class="bg-white dark:bg-surface-dark rounded-xl border border-slate-200 dark:border-border-dark overflow-hidden h-fit">
+                            <div
+                                class="px-6 py-4 border-b border-slate-200 dark:border-border-dark bg-slate-50/50 dark:bg-white/5">
+                                <h3 class="text-lg font-bold">Tableau Nutritionnel (pour 100g)</h3>
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="space-y-1">
+                                        <label class="text-xs font-bold text-slate-400 uppercase">Énergie (kcal)</label>
+                                        <input
+                                            class="w-full bg-transparent border-slate-200 dark:border-border-dark rounded-lg"
+                                            type="text" value="304" />
+                                    </div>
+                                    <div class="space-y-1">
+                                        <label class="text-xs font-bold text-slate-400 uppercase">Glucides (g)</label>
+                                        <input
+                                            class="w-full bg-transparent border-slate-200 dark:border-border-dark rounded-lg"
+                                            type="text" value="82" />
+                                    </div>
+                                    <div class="space-y-1">
+                                        <label class="text-xs font-bold text-slate-400 uppercase">Protéines (g)</label>
+                                        <input
+                                            class="w-full bg-transparent border-slate-200 dark:border-border-dark rounded-lg"
+                                            type="text" value="0.3" />
+                                    </div>
+                                    <div class="space-y-1">
+                                        <label class="text-xs font-bold text-slate-400 uppercase">Sucres (g)</label>
+                                        <input
+                                            class="w-full bg-transparent border-slate-200 dark:border-border-dark rounded-lg"
+                                            type="text" value="82" />
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- Beekeeping Notes -->
+                        <section
+                            class="bg-white dark:bg-surface-dark rounded-xl border border-slate-200 dark:border-border-dark overflow-hidden h-fit">
+                            <div
+                                class="px-6 py-4 border-b border-slate-200 dark:border-border-dark bg-slate-50/50 dark:bg-white/5">
+                                <h3 class="text-lg font-bold">Notes d'Apiculture</h3>
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <div class="space-y-2">
+                                    <label class="text-sm font-semibold">Origine Géographique</label>
+                                    <input
+                                        class="w-full bg-transparent border-slate-200 dark:border-border-dark rounded-lg"
+                                        type="text" value="Djelfa, Algérie" />
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="text-sm font-semibold">Notes de l'Apiculteur</label>
+                                    <textarea
+                                        class="w-full bg-transparent border-slate-200 dark:border-border-dark rounded-lg"
+                                        rows="4">Récolté en fin de saison sèche. Les abeilles ont butiné exclusivement le Ziziphus spina-christi. Teneur en humidité très faible (&lt; 17%), garantissant une conservation optimale.</textarea>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- Final Action Buttons -->
+                    <div
+                        class="flex items-center justify-end gap-4 pt-6 pb-12 border-t border-slate-200 dark:border-border-dark">
+                        <button
+                            class="px-6 h-12 bg-slate-100 dark:bg-border-dark text-slate-700 dark:text-white font-bold rounded-lg hover:bg-slate-200 transition-colors"
+                            type="button">
+                            Abandonner les modifications
+                        </button>
+                        <button
+                            class="px-10 h-12 bg-primary text-background-dark font-black rounded-lg hover:shadow-lg hover:shadow-primary/20 transition-all"
+                            type="submit">
+                            Enregistrer le Produit
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

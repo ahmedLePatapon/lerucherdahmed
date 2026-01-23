@@ -12,7 +12,7 @@ type Props = {
     onClose?: () => void;
 };
 
-const items = [
+const sideBarsItems = [
     { href: "/admin", label: "Dashboard", icon: Home, active: true },
     { href: "/admin/produits", label: "Produits", icon: PackageOpen },
     { href: "/admin/rencontres", label: "Rencontres", icon: Users },
@@ -38,7 +38,7 @@ export default function Sidebar({ mobileOpen, onClose }: Props): React.ReactElem
                         <Logo admin={true} />
                     </div>
                     <nav className="flex flex-col gap-1">
-                        {items.map(({ label, href, icon }) => (
+                        {sideBarsItems.map(({ label, href, icon }) => (
                             <NavItem key={href} href={href} label={label} active={isActive(href)} icon={icon} />
                         ))}
                     </nav>

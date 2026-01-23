@@ -64,9 +64,9 @@ export default function ProductsTable({ products = [] }: { products?: Product[] 
                         </td>
                         <td className="px-6 py-4">
                             <div className="flex justify-end">
-                                <Link href={`/admin/products/${p.id}`} className="text-primary hover:text-primary/80">
+                                {/* <Link href={`/admin/products/${.id}`} className="text-primary hover:text-primary/80">
                                     <FilePenLine />
-                                </Link>
+                                </Link> */}
                             </div>
                         </td>
                     </tr>
@@ -92,9 +92,9 @@ export default function ProductsTable({ products = [] }: { products?: Product[] 
                         </td>
                         <td className="px-6 py-4">
                             <div className="flex justify-end">
-                                <Link href={`/admin/products/${p.id}`} className="text-primary hover:text-primary/80">
+                                {/* <Link href={`/admin/products/${p.id}`} className="text-primary hover:text-primary/80">
                                     <FilePenLine />
-                                </Link>
+                                </Link> */}
                             </div>
                         </td>
                     </tr>

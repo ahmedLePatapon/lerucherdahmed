@@ -43,6 +43,36 @@ export function FeaturesSection() {
                         {features.map((feature) => (
                             <FeatureCard key={feature.title} icon={feature.icon} title={feature.title} description={feature.description} />
                         ))}
+                        {/* <div
+                            className="bg-background-light p-6 rounded-xl border border-primary/10 hover:border-primary transition-colors group shadow-sm">
+                            <div
+                                className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 text-primary shadow-sm border border-gray-100 group-hover:bg-primary group-hover:text-white transition-colors">
+                                <span className="material-symbols-outlined text-2xl">eco</span>
+                            </div>
+                            <h3 className="text-text-main text-lg font-bold mb-2">100% Naturel</h3>
+                            <p className="text-text-muted text-sm leading-relaxed">Aucun ajout, aucun traitement chimique, juste
+                                le pur nectar des fleurs transformé par nos abeilles.</p>
+                        </div>
+                        <div
+                            className="bg-background-light p-6 rounded-xl border border-primary/10 hover:border-primary transition-colors group shadow-sm">
+                            <div
+                                className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 text-primary shadow-sm border border-gray-100 group-hover:bg-primary group-hover:text-white transition-colors">
+                                <span className="material-symbols-outlined text-2xl">location_on</span>
+                            </div>
+                            <h3 className="text-text-main text-lg font-bold mb-2">Production Locale</h3>
+                            <p className="text-text-muted text-sm leading-relaxed">Récolté et mis en pot directement au rucher,
+                                garantissant une fraîcheur et une traçabilité absolues.</p>
+                        </div>
+                        <div
+                            className="bg-background-light p-6 rounded-xl border border-primary/10 hover:border-primary transition-colors group shadow-sm">
+                            <div
+                                className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-4 text-primary shadow-sm border border-gray-100 group-hover:bg-primary group-hover:text-white transition-colors">
+                                <span className="material-symbols-outlined text-2xl">volunteer_activism</span>
+                            </div>
+                            <h3 className="text-text-main text-lg font-bold mb-2">Apiculture Durable</h3>
+                            <p className="text-text-muted text-sm leading-relaxed">Nous protégeons la biodiversité et nos
+                                colonies avant tout, en respectant leur cycle naturel.</p>
+                        </div> */}
                     </div>
                 </div>
             </div>

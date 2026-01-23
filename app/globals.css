@@ -91,10 +91,3 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-
-/* Sidebar active item (design reference) */
-.active-nav {
-  background-color: rgba(242, 204, 13, 0.12);
-  border-right: 4px solid #f2cc0d;
-  color: #f2cc0d;
-}

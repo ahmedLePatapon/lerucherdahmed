@@ -6,8 +6,6 @@ interface LogoProps {
     variant?: "light" | "dark";
     size?: "sm" | "md" | "lg";
     className?: string;
-    admin?: boolean;
-    href?: string;
 }
 
 type SizeKey = "sm" | "md" | "lg";
@@ -17,7 +15,7 @@ type SizeSpec = {
     text: string;
 };
 
-export function Logo({ variant = "dark", size = "md", className, admin = false, href = "/" }: LogoProps) {
+export function Logo({ variant = "dark", size = "md", className }: LogoProps) {
     const sizes: Record<SizeKey, SizeSpec> = {
         sm: {
             icon: "w-8 h-8",
@@ -39,7 +37,7 @@ export function Logo({ variant = "dark", size = "md", className, admin = false, 
     const textColor = variant === "light" ? "text-white" : "text-text-main";
 
     return (
-        <Link href={href} className={cn("flex items-center gap-3", className)}>
+        <Link href="/" className={cn("flex items-center gap-3", className)}>
             <div
                 className={cn(
                     "flex items-center justify-center bg-primary rounded-lg text-white",
@@ -48,18 +46,9 @@ export function Logo({ variant = "dark", size = "md", className, admin = false, 
             >
                 <Hexagon size={sizes[size].iconSize} fill="currentColor" />
             </div>
-            {
-                admin ? (
-                    <div>
-                        <h3 className="text-white text-base font-bold leading-none">Le Rucher d'Ahmed</h3>
-                        <p className="text-gray-400 text-xs mt-1">Administration</p>
-                    </div>
-                ) : (
-                    <span className={cn("font-bold", sizes[size].text, textColor)}>
-                        Le Rucher d&apos;Ahmed
-                    </span>
-                )
-            }
+            <span className={cn("font-bold", sizes[size].text, textColor)}>
+                Le Rucher d&apos;Ahmed
+            </span>
         </Link>
     );
 }

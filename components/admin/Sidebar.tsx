@@ -72,7 +72,7 @@ export default function Sidebar({ mobileOpen, onClose }: Props): React.ReactElem
                                 </button>
                             </div>
                             <nav className="flex flex-col gap-1">
-                                {items.map(({ label, href, icon }) => (
+                                {sideBarsItems.map(({ label, href, icon }) => (
                                     <NavItem key={href} href={href} label={label} icon={icon} active={isActive(href)} onClick={onClose} />
                                 ))}
                             </nav>

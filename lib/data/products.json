@@ -1,0 +1,72 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Miel de Jujubier (Sidr)",
+      "slug": "miel-jujubier-sidr",
+      "price": 45,
+      "description": "Un miel rare et précieux, récolté sur les fleurs de jujubier sauvage. Reconnu pour ses propriétés exceptionnelles et son goût unique.",
+      "shortDescription": "Miel rare et précieux du jujubier sauvage",
+      "image": "/images/products/miel-jujubier.jpg",
+      "images": [
+        "/images/products/miel-jujubier.jpg",
+        "/images/products/miel-jujubier-2.jpg",
+        "/images/products/miel-jujubier-3.jpg"
+      ],
+      "badge": "best-seller",
+      "rating": 4.9,
+      "weight": "500g",
+      "inStock": true,
+      "featured": true,
+      "specs": {
+        "weight": "500",
+        "harvestYear": "2024",
+        "season": "Été",
+        "tasteProfile": "Intense et complexe"
+      },
+      "nutrition": {
+        "energy": "320",
+        "carbs": "80",
+        "protein": "0.3",
+        "sugars": "78"
+      },
+      "apicultureNotes": {
+        "geographicalOrigin": "Montagnes de Tlemcen, Algérie",
+        "beekeeperNotes": "Ce miel exceptionnel est récolté dans des zones préservées où le jujubier pousse à l'état sauvage. La récolte se fait une fois par an, garantissant une qualité optimale."
+      }
+    },
+    {
+      "id": "2",
+      "name": "Miel d'Eucalyptus",
+      "slug": "miel-eucalyptus",
+      "price": 18,
+      "description": "Miel corsé aux notes balsamiques, récolté sur les fleurs d'eucalyptus. Idéal pour la gorge et les voies respiratoires.",
+      "shortDescription": "Miel corsé aux notes balsamiques",
+      "image": "/images/products/miel-eucalyptus.jpg",
+      "images": [
+        "/images/products/miel-eucalyptus.jpg"
+      ],
+      "badge": "none",
+      "rating": 4.6,
+      "weight": "500g",
+      "inStock": true,
+      "featured": false,
+      "specs": {
+        "weight": "500",
+        "harvestYear": "2024",
+        "season": "Automne",
+        "tasteProfile": "Corsé et balsamique"
+      },
+      "nutrition": {
+        "energy": "310",
+        "carbs": "78",
+        "protein": "0.4",
+        "sugars": "76"
+      },
+      "apicultureNotes": {
+        "geographicalOrigin": "Forêts d'eucalyptus de Kabylie",
+        "beekeeperNotes": "Récolté dans les forêts d'eucalyptus, ce miel bénéficie des propriétés médicinales de l'arbre."
+      }
+    }
+  ]
+}

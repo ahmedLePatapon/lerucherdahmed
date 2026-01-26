@@ -1,46 +1,238 @@
-import React from 'react';
+"use client";
 
-const products = [
-    {
-        id: 'p1', name: 'Miel de lavande', price: '12€', stock: 24, image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDJxieGe_JTKdpNvaz6Nhb0mC7vSMnPQiMYkmpRUC_QheMMNGnsVB7Y7s7-gY1OnVbm4xR-wMNTKncBDMRMai6hADwyAuRUsno_RRYnkYqFTEZjfWPX9SZaJuSQnUvmfazw3OG3G2ZRmK6KtCvrrMTfcGBssAeLNrLyKDPOiKitikNrh6dC2QPpCjMX7I9ONVKvldL_fhPSIZKv7MbjR0eGcuZkfQAkHKEaIq_hN3vcb1zmEA3hSngt2OmDtdFOQFeRbxTOey57vG0"
-    },
-    {
-        id: 'p2', name: 'Miel de châtaignier', price: '14€', stock: 0, image: "https://lh3.googleusercontent.com/aida-public/AB6AXuADhaGfu5v2PMalNfOgXHuCn5CrDdvTA79bi1APQRen9WhmqMkbvUT-5qYTTDTkpkWxYK1UcWq7Nv6BAN8AH2lzC_tqmJ1b6417-9sl8tbGMCH62WHGuvYX-7iOt_B4NbDXKva-dF8hQsoLTNIbgy802pKl1iHE47FRpSsrbqns1uBmEWysoK-LwTv1v5O1m_UKgMGDDgG6xnbt5inxETYTHxeduZgj2sJDQtRSfb8tAjI4urmZ1tU4KkekPznTc7MOENgovuTieH8"
-    },
-    {
-        id: 'p3', name: 'Miel toutes fleurs', price: '10€', stock: 42, image: "https://lh3.googleusercontent.com/aida-public/AB6AXuD_vjHRVQOZsUbhyxJYpyAbWav6cN954wKkJ6cyUnqjFFzA8Iz2VL5dEcGRgIaE4lOsn2UR13qtJWrgpkR2DOBJgjkUXQxdbuQwisON6axgTkHLW30zs0rFA9UWCMtSKFX7xNsRNq_pz4pPpFIRuKXLtOqM3vG8PPZh8krk5SgHgwY-3ozX2HRt7gYlDLhNn5yRB75Fock7w-jjmv7MjAzgUhXcf7nenm4YOMEPQN4D4ffng6RtcRpLmCFbiohBdOi85WoZQjvbFIg"
-    },
-];
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { ExternalLink, Save, X } from "lucide-react";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
+import { Button } from "@/components/ui/Button";
+import { FormSection } from "@/components/ui/FormSection";
+import { ProductGeneralInfo } from "@/components/admin/product/ProductGeneralInfo";
+import { ProductDescriptions } from "@/components/admin/product/ProductDescriptions";
+import { ProductMediaUpload } from "@/components/admin/product/ProductMediaUpload";
+import { ProductSpecs } from "@/components/admin/product/ProductSpecs";
+import { ProductNutrition } from "@/components/admin/product/ProductNutrition";
+import { ProductApiNotes } from "@/components/admin/product/ProductApiNotes";
+import { productSchema, ProductSchemaType } from "@/lib/schemas/productSchema";
+import { Product } from "@/lib/types/product";
 
 type PageProps = {
-    params: Promise<{
-        id: string;
-    }>;
+    params: Promise<{ id: string }>;
 };
 
-export default async function ProductAdminPage({ params }: PageProps): Promise<React.ReactElement> {
-    const { id } = await params;
+export default function ProductEditPage({ params }: PageProps) {
+    const router = useRouter();
+    const [productId, setProductId] = useState<string>("");
+    const [isLoading, setIsLoading] = useState(true);
+    const [isSaving, setIsSaving] = useState(false);
+    const [saveSuccess, setSaveSuccess] = useState(false);
+    const [saveError, setSaveError] = useState<string | null>(null);
 
-    const product = products.find((p) => p.id === id);
+    const {
+        register,
+        handleSubmit,
+        formState: { errors, isDirty },
+        setValue,
+        watch,
+        reset,
+    } = useForm<ProductSchemaType>({
+        resolver: zodResolver(productSchema),
+        defaultValues: {
+            name: "",
+            slug: "",
+            price: 0,
+            badge: "none",
+            shortDescription: "",
+            description: "",
+            images: [],
+            mainImageIndex: 0,
+            weight: "",
+            harvestYear: "",
+            season: "",
+            tasteProfile: "",
+            energy: "",
+            carbs: "",
+            protein: "",
+            sugars: "",
+            geographicalOrigin: "",
+            beekeeperNotes: "",
+        },
+    });
+
+    const images = watch("images");
+    const mainImageIndex = watch("mainImageIndex");
+    const productName = watch("name");
+
+    useEffect(() => {
+        async function loadProduct() {
+            const { id } = await params;
+            setProductId(id);
+
+            try {
+                const res = await fetch(`/api/products/${id}`);
+                if (!res.ok) throw new Error("Not found");
+                const data: Product = await res.json();
+
+                // map product to form fields
+                reset({
+                    name: data.name || "",
+                    slug: data.slug || "",
+                    price: data.price || 0,
+                    badge: (data.badge as any) || "none",
+                    shortDescription: data.shortDescription || "",
+                    description: data.description || "",
+                    images: data.images || (data.image ? [data.image] : []),
+                    mainImageIndex: 0,
+                    weight: data.weight || "",
+                    harvestYear: data.specs?.harvestYear || "",
+                    season: data.specs?.season || "",
+                    tasteProfile: data.specs?.tasteProfile || "",
+                    energy: data.nutrition?.energy || "",
+                    carbs: data.nutrition?.carbs || "",
+                    protein: data.nutrition?.protein || "",
+                    sugars: data.nutrition?.sugars || "",
+                    geographicalOrigin: data.apicultureNotes?.geographicalOrigin || "",
+                    beekeeperNotes: data.apicultureNotes?.beekeeperNotes || "",
+                });
+            } catch (error) {
+                console.error("Error loading product:", error);
+            } finally {
+                setIsLoading(false);
+            }
+        }
+
+        loadProduct();
+    }, [params, reset]);
+
+    const generateSlug = () => {
+        const slug = productName
+            .toLowerCase()
+            .replace(/[^a-z0-9\s-]/g, "")
+            .replace(/\s+/g, "-")
+            .replace(/-+/g, "-")
+            .replace(/^-+|-+$/g, "");
+        setValue("slug", slug, { shouldValidate: true });
+    };
+
+    const onSubmit = async (data: ProductSchemaType) => {
+        setIsSaving(true);
+        setSaveError(null);
+        setSaveSuccess(false);
+
+        try {
+            const payload: Partial<Product> = {
+                name: data.name,
+                slug: data.slug,
+                price: data.price,
+                badge: data.badge as any,
+                shortDescription: data.shortDescription,
+                description: data.description,
+                images: data.images,
+                image: data.images && data.images.length > 0 ? data.images[0] : "",
+                weight: data.weight,
+                specs: {
+                    weight: data.weight,
+                    harvestYear: data.harvestYear,
+                    season: data.season,
+                    tasteProfile: data.tasteProfile,
+                },
+                nutrition: {
+                    energy: data.energy,
+                    carbs: data.carbs,
+                    protein: data.protein,
+                    sugars: data.sugars,
+                },
+                apicultureNotes: {
+                    geographicalOrigin: data.geographicalOrigin,
+                    beekeeperNotes: data.beekeeperNotes,
+                },
+            };
+
+            const res = await fetch(`/api/products/${productId}`, {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload),
+            });
+
+            if (!res.ok) throw new Error("Save failed");
+
+            setSaveSuccess(true);
+            setTimeout(() => setSaveSuccess(false), 3000);
+        } catch (error) {
+            console.error("Error saving product:", error);
+            setSaveError("Erreur lors de l'enregistrement");
+        } finally {
+            setIsSaving(false);
+        }
+    };
+
+    const handleCancel = () => {
+        if (isDirty) {
+            if (!confirm("Vous avez des modifications non sauvegardées. Voulez-vous vraiment quitter ?")) return;
+        }
+        router.push("/admin/produits");
+    };
+
+    if (isLoading) {
+        return (
+            <div className="flex items-center justify-center min-h-screen">
+                Chargement...
+            </div>
+        );
+    }
 
     return (
-        <div className="p-6 lg:p-10 space-y-8 max-w-5xl mx-auto w-full">
-            <div className="flex-1 flex flex-col min-w-0">
-                {product ? (
-                    <div className="flex flex-wrap justify-between items-end gap-4">
-                        <div className="space-y-1">
-                            <h1 className="text-3xl lg:text-4xl font-black tracking-tight leading-tight">Miel de Jujubier (Sidr)
-                            </h1>
-                            <p className="text-slate-500 dark:text-[#bcb69a]">Mettez à jour les détails, les spécifications et
-                                les notes d'apiculture.</p>
-                        </div>
+        <div className="flex-1 flex flex-col min-w-0">
+            <header className="sticky top-0 bg-white z-10 border-b p-4 flex items-center justify-between">
+                <div className="flex items-center space-x-4">
+                    <Breadcrumbs items={[{ label: "Admin", href: "/admin" }, { label: "Produits", href: "/admin/produits" }, { label: "Édition" }]} />
+                </div>
+
+                <div className="flex items-center gap-2">
+                    <Button variant="ghost" onClick={() => router.push(`/produit/${productId}`)}>
+                        <ExternalLink className="w-4 h-4 mr-2" /> Voir le produit public
+                    </Button>
+                    <Button variant="outline" onClick={handleCancel}>
+                        <X className="w-4 h-4 mr-2" /> Annuler
+                    </Button>
+                    <Button variant="primary" onClick={handleSubmit(onSubmit)} isLoading={isSaving}>
+                        <Save className="w-4 h-4 mr-2" /> Enregistrer
+                    </Button>
+                </div>
+            </header>
+
+            <main className="p-6 space-y-6">
+                <form onSubmit={(e) => e.preventDefault()}>
+                    <FormSection title="Informations générales">
+                        <ProductGeneralInfo register={register} errors={errors} onGenerateSlug={generateSlug} />
+                    </FormSection>
+
+                    <FormSection title="Descriptions">
+                        <ProductDescriptions register={register} errors={errors} />
+                    </FormSection>
+
+                    <FormSection title="Médias">
+                        <ProductMediaUpload
+                            images={images}
+                            mainImageIndex={mainImageIndex}
+                            onImagesChange={(imgs) => setValue("images", imgs)}
+                            onMainImageChange={(i) => setValue("mainImageIndex", i)}
+                        />
+                    </FormSection>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <FormSection title="Spécifications techniques">
+                            <ProductSpecs register={register} errors={errors} />
+                        </FormSection>
+
+                        <FormSection title="Tableau nutritionnel">
+                            <ProductNutrition register={register} errors={errors} />
+                        </FormSection>
                     </div>
 
-
-                ) : (
-                    <p>Produit non trouvé.</p>
-                )}
-            </div>
+                </form>
+            </main>
         </div>
     );
 }

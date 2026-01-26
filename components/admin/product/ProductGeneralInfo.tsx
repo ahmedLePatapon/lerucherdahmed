@@ -23,8 +23,8 @@ const BADGE_OPTIONS = [
 
 export function ProductGeneralInfo({ register, errors, onGenerateSlug }: ProductGeneralInfoProps) {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="md:col-span-2">
+        <div className="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="space-y-2">
                 <Input
                     label="Nom du produit"
                     {...register("name")}
@@ -32,18 +32,25 @@ export function ProductGeneralInfo({ register, errors, onGenerateSlug }: Product
                 />
             </div>
 
-            <div className="md:col-span-2">
-                <div className="flex gap-2">
-                    <Input
-                        label="Slug"
-                        {...register("slug")}
-                        error={errors.slug?.message as string | undefined}
-                    />
-                    <Button variant="outline" size="md" onClick={onGenerateSlug} type="button">
-                        <RefreshCw className="w-4 h-4 mr-2" />
-                        Générer
+            {/* corrige l'aignement des inputs de gauche et du bouton */}
+
+            <div className="space-y-2">
+                <div className="flex gap-2 items-end">
+                    <div className="flex-1">
+                        <Input
+                            id="slug"
+                            label="Slug"
+                            {...register("slug")}
+                        />
+
+                    </div>
+                    <Button variant="outline" size="md" onClick={onGenerateSlug} type="button" className="border border-border-light">
+                        <RefreshCw className="w-4 h-4" />
                     </Button>
                 </div>
+                {errors.slug?.message && (
+                    <span className="text-red-500 text-sm">{errors.slug?.message}</span>
+                )}
             </div>
 
             <div>

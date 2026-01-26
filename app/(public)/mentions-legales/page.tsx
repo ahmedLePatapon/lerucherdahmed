@@ -62,7 +62,7 @@ export default function MentionsLegalesPage() {
                         <TableOfContents items={itemsTableOfContents} />
                     </aside>
                     <main className="lg:col-span-9 flex flex-col gap-12">
-                        <div className="w-full max-w-[800px] flex flex-col gap-10">
+                        <div className="w-full max-w-200 flex flex-col gap-10">
                             {/* Titre et date */}
                             <HeroSectionP
                                 title="Mentions Légales"

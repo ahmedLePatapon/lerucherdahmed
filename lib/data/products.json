@@ -1,17 +1,17 @@
 {
   "products": [
     {
-      "id": "1",
+      "id": "101",
       "name": "Miel de Jujubier (Sidr)",
       "slug": "miel-jujubier-sidr",
       "price": 45,
       "description": "Un miel rare et précieux, récolté sur les fleurs de jujubier sauvage. Reconnu pour ses propriétés exceptionnelles et son goût unique.",
       "shortDescription": "Miel rare et précieux du jujubier sauvage",
-      "image": "/images/products/miel-jujubier.jpg",
+      "image": "/images/products/miel-jujubier.png",
       "images": [
-        "/images/products/miel-jujubier.jpg",
-        "/images/products/miel-jujubier-2.jpg",
-        "/images/products/miel-jujubier-3.jpg"
+        "/images/products/miel-jujubier.png",
+        "/images/products/miel-jujubier-2.png",
+        "/images/products/miel-jujubier-3.png"
       ],
       "badge": "best-seller",
       "rating": 4.9,
@@ -21,8 +21,8 @@
       "specs": {
         "weight": "500",
         "harvestYear": "2024",
-        "season": "Été",
-        "tasteProfile": "Intense et complexe"
+        "season": "été",
+        "tasteProfile": "intense et complexe"
       },
       "nutrition": {
         "energy": "320",
@@ -30,21 +30,18 @@
         "protein": "0.3",
         "sugars": "78"
       },
-      "apicultureNotes": {
-        "geographicalOrigin": "Montagnes de Tlemcen, Algérie",
-        "beekeeperNotes": "Ce miel exceptionnel est récolté dans des zones préservées où le jujubier pousse à l'état sauvage. La récolte se fait une fois par an, garantissant une qualité optimale."
-      }
+      "apiculteurNote": "Ce miel exceptionnel est récolté dans des zones préservées où le jujubier pousse à l'état sauvage. La récolte se fait une fois par an, garantissant une qualité optimale."
     },
     {
-      "id": "2",
+      "id": "102",
       "name": "Miel d'Eucalyptus",
       "slug": "miel-eucalyptus",
       "price": 18,
       "description": "Miel corsé aux notes balsamiques, récolté sur les fleurs d'eucalyptus. Idéal pour la gorge et les voies respiratoires.",
       "shortDescription": "Miel corsé aux notes balsamiques",
-      "image": "/images/products/miel-eucalyptus.jpg",
+      "image": "/images/products/miel-eucalyptus.png",
       "images": [
-        "/images/products/miel-eucalyptus.jpg"
+        "/images/products/miel-eucalyptus.png"
       ],
       "badge": "none",
       "rating": 4.6,
@@ -54,8 +51,8 @@
       "specs": {
         "weight": "500",
         "harvestYear": "2024",
-        "season": "Automne",
-        "tasteProfile": "Corsé et balsamique"
+        "season": "automne",
+        "tasteProfile": "corsé et balsamique"
       },
       "nutrition": {
         "energy": "310",
@@ -63,10 +60,133 @@
         "protein": "0.4",
         "sugars": "76"
       },
-      "apicultureNotes": {
-        "geographicalOrigin": "Forêts d'eucalyptus de Kabylie",
-        "beekeeperNotes": "Récolté dans les forêts d'eucalyptus, ce miel bénéficie des propriétés médicinales de l'arbre."
-      }
+      "apiculteurNote": "Récolté dans les forêts d'eucalyptus, ce miel bénéficie des propriétés médicinales de l'arbre."
+    },
+    {
+      "id": "1",
+      "name": "Miel de Lavande",
+      "slug": "miel-de-lavande",
+      "price": 12.0,
+      "description": "Un miel crémeux aux notes florales délicates, récolté sur les plateaux ensoleillés de Provence. Sa couleur dorée et sa texture onctueuse en font un incontournable pour les amateurs de saveurs subtiles.",
+      "shortDescription": "Un miel crémeux aux notes florales délicates, récolté sur les plateaux ensoleillés de Provence.",
+      "image": "/images/products/miel-lavande.png",
+      "badge": "best-seller",
+      "rating": 4.9,
+      "weight": "500g",
+      "harvest": "Juillet",
+      "usage": "Idéal sur tartines et dans le thé",
+      "season": "été",
+      "taste": "doux",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "2",
+      "name": "Miel d'Acacia",
+      "slug": "miel-acacia",
+      "price": 14.0,
+      "description": "Limpide et liquide, ce miel est apprécié pour sa grande douceur et son index glycémique modéré. Parfait pour sucrer les thés et infusions sans en altérer les saveurs.",
+      "shortDescription": "Limpide et liquide, apprécié pour sa grande douceur et son index glycémique modéré.",
+      "image": "/images/products/miel-acacia.jpg",
+      "badge": "douceur",
+      "rating": 4.8,
+      "weight": "500g",
+      "harvest": "Mai",
+      "usage": "Pour sucrer les thés",
+      "season": "printemps",
+      "taste": "doux",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "3",
+      "name": "Miel de Châtaignier",
+      "slug": "miel-chataignier",
+      "price": 11.0,
+      "description": "Un miel de caractère, corsé et boisé, parfait pour les amateurs de saveurs puissantes. Sa couleur ambrée foncée et son goût persistant en font un allié idéal des fromages et plats rustiques.",
+      "shortDescription": "Un miel de caractère, corsé et boisé, parfait pour les amateurs de saveurs puissantes.",
+      "image": "/images/products/miel-chataignier.jpg",
+      "badge": "intense",
+      "rating": 5.0,
+      "weight": "500g",
+      "harvest": "Septembre",
+      "nutrition": {
+        "Énergie": "330 kcal / 100g",
+        "Glucides": "82 g",
+        "Protéines": "0.5 g",
+        "Lipides": "0 g"
+      },
+      "apiculteurNote": "Un miel de caractère, corsé et boisé, parfait pour les amateurs de saveurs puissantes.",
+      "usage": "Accompagne les fromages",
+      "season": "automne",
+      "taste": "intense",
+      "inStock": true,
+      "featured": true
+    },
+    {
+      "id": "4",
+      "name": "Miel de Printemps",
+      "slug": "miel-printemps",
+      "price": 12.5,
+      "description": "Un miel onctueux récolté en début de saison, aux notes florales délicates rappelant les vergers en fleurs. Sa texture crémeuse et son goût subtil en font un favori du petit-déjeuner.",
+      "shortDescription": "Un miel onctueux récolté en début de saison. Notes florales délicates.",
+      "image": "/images/products/miel-printemps.jpg",
+      "badge": "nouveau",
+      "rating": 4.7,
+      "weight": "500g",
+      "harvest": "Avril",
+      "usage": "Idéal sur tartines",
+      "season": "printemps",
+      "taste": "doux",
+      "inStock": true,
+      "featured": false,
+      "specs": {
+        "Origine": "Rucher de Charente",
+        "Poids net": "500g",
+        "Récolte": "Avril",
+        "DLUO": "24 mois"
+      },
+      "nutrition": {
+        "Énergie": "320 kcal / 100g",
+        "Glucides": "80 g",
+        "Protéines": "0.3 g",
+        "Lipides": "0 g"
+      },
+      "apiculteurNote": "Ce miel de printemps est issu des premières floraisons du verger. Il révèle des arômes fruités et une douceur légère, parfait sur des tartines ou dans un yaourt."
+    },
+    {
+      "id": "5",
+      "name": "Miel de Colza",
+      "slug": "miel-colza",
+      "price": 11.0,
+      "description": "Un miel blanc à la texture fine et crémeuse, récolté sur les vastes champs dorés de colza. Son goût délicat et sa consistance en font un excellent ingrédient pour la cuisine et la pâtisserie.",
+      "shortDescription": "Un miel blanc à la texture fine, récolté sur les vastes champs dorés.",
+      "image": "/images/products/miel-colza.jpg",
+      "rating": 4.6,
+      "weight": "500g",
+      "harvest": "Mai",
+      "usage": "Cuisine et pâtisserie",
+      "season": "printemps",
+      "taste": "doux",
+      "inStock": true,
+      "featured": false
+    },
+    {
+      "id": "6",
+      "name": "Miel Toutes Fleurs",
+      "slug": "miel-toutes-fleurs",
+      "price": 13.5,
+      "description": "Le reflet de la biodiversité locale. Un mélange naturel des nectars de saison, offrant un bouquet de saveurs unique qui varie d'une récolte à l'autre.",
+      "shortDescription": "Le reflet de la biodiversité locale. Un mélange naturel des nectars de saison.",
+      "image": "/images/products/miel-fleurs.jpg",
+      "rating": 4.8,
+      "weight": "500g",
+      "harvest": "Juin",
+      "usage": "Usage quotidien",
+      "season": "été",
+      "taste": "moyen",
+      "inStock": true,
+      "featured": false
     }
   ]
 }

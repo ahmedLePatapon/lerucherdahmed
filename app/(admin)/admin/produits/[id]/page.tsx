@@ -73,7 +73,9 @@ export default function ProductEditPage({ params }: PageProps) {
                 const res = await fetch(`/api/products/${id}`);
                 if (!res.ok) throw new Error("Not found");
                 const data: Product = await res.json();
-
+                console.log('**********************');
+                console.log('data', data);
+                console.log('**********************');
                 // map product to form fields
                 reset({
                     name: data.name || "",
@@ -185,9 +187,9 @@ export default function ProductEditPage({ params }: PageProps) {
     return (
         <div className="flex-1 flex flex-col min-w-0">
             <header className="sticky top-0 bg-white z-10 border-b p-4 flex items-center justify-between">
-                <div className="flex items-center space-x-4">
+                {/* <div className="flex items-center space-x-4">
                     <Breadcrumbs items={[{ label: "Admin", href: "/admin" }, { label: "Produits", href: "/admin/produits" }, { label: "Édition" }]} />
-                </div>
+                </div> */}
 
                 <div className="flex items-center gap-2">
                     <Button variant="ghost" onClick={() => router.push(`/produit/${productId}`)}>
@@ -202,8 +204,12 @@ export default function ProductEditPage({ params }: PageProps) {
                 </div>
             </header>
 
-            <main className="p-6 space-y-6">
-                <form onSubmit={(e) => e.preventDefault()}>
+            <div className="p-6 lg:p-10 space-y-8 max-w-5xl mx-auto w-full">
+                <h1 className="text-3xl lg:text-4xl font-black tracking-tight leading-tight">{productName}
+                </h1>
+                <p className="text-slate-500 dark:text-[#bcb69a]">Mettez à jour les détails, les spécifications et
+                    les notes d'apiculture.</p>
+                <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
                     <FormSection title="Informations générales">
                         <ProductGeneralInfo register={register} errors={errors} onGenerateSlug={generateSlug} />
                     </FormSection>
@@ -232,7 +238,7 @@ export default function ProductEditPage({ params }: PageProps) {
                     </div>
 
                 </form>
-            </main>
+            </div>
         </div>
     );
 }

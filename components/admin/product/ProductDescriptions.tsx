@@ -15,6 +15,7 @@ export function ProductDescriptions({ register, errors }: ProductDescriptionsPro
             <div>
                 <Textarea
                     label="Description courte"
+                    rows={2}
                     {...register("shortDescription")}
                     error={errors.shortDescription?.message as string | undefined}
                 />
@@ -23,6 +24,7 @@ export function ProductDescriptions({ register, errors }: ProductDescriptionsPro
             <div>
                 <Textarea
                     label="Description complète"
+                    rows={6}
                     {...register("description")}
                     error={errors.description?.message as string | undefined}
                 />

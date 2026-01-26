@@ -19,9 +19,9 @@ export default function HeaderAdmin({ onOpenMobile, pathname }: Props): React.Re
                     <h2 className="text-xl font-bold">{pathname?.includes('/admin/produits/') ? 'Modifier le Produit' : 'Tableau de bord'}</h2>
                 </div>
             </div>
-            <div>
+            {/* <div>
                 <button className="px-3 py-2 rounded-lg bg-primary/10 text-primary font-medium">Nouveau produit</button>
-            </div>
+            </div> */}
         </header>
     );
 }

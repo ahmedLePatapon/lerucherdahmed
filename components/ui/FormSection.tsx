@@ -10,15 +10,15 @@ export function FormSection({ title, children, className, ...props }: FormSectio
     return (
         <section
             className={cn(
-                "bg-white dark:bg-surface-dark rounded-xl border border-slate-200 dark:border-border-dark overflow-hidden",
+                "rounded-xl border border-gray-200 overflow-hidden bg-primary/10",
                 className
             )}
             {...props}
         >
-            <div className="px-6 py-4 border-b border-slate-200 dark:border-border-dark bg-slate-50/50 dark:bg-white/5">
-                <h3 className="text-lg font-bold text-text-main dark:text-text-light">{title}</h3>
+            <div className="px-6 py-4 border-b border-gray-200 bg-slate-50/50 dark:bg-white/5">
+                <h3 className="text-lg font-bold text-text-main ">{title}</h3>
             </div>
-            <div className="p-6">
+            <div className="p-6 bg-white space-y-6">
                 {children}
             </div>
         </section>

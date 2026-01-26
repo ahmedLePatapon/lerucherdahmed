@@ -3,12 +3,9 @@
 import { FilePenLine } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
-type Product = {
-    id: string; name: string; price: string; stock: number, category?: string;
-    image?: string;
-};
+import { Product as LibProduct } from '@/lib/data/products';
 
-export default function ProductsTable({ products = [] }: { products?: Product[] }): React.ReactElement {
+export default function ProductsTable({ products = [] }: { products?: LibProduct[] }): React.ReactElement {
     const renderRows = () => {
         if (products.length === 0) {
             return (
@@ -102,32 +99,35 @@ export default function ProductsTable({ products = [] }: { products?: Product[] 
             );
         }
 
-        return products.map((p) => (
-            <tr key={p.id} className="hover:bg-gray-50 transition-colors">
-                <td className="px-6 py-4">
-                    <div className="flex items-center gap-3">
-                        <div className="size-10 rounded-lg bg-gray-100 overflow-hidden">
-                            <img alt={p.name} className="w-full h-full object-cover" src={p.image ?? ''} />
+        return products.map((p) => {
+            const quantity = (p as any).quantity ?? (p.inStock ? 10 : 0);
+            return (
+                <tr key={p.id} className="hover:bg-gray-50 transition-colors">
+                    <td className="px-6 py-4">
+                        <div className="flex items-center gap-3">
+                            <div className="size-10 rounded-lg bg-gray-100 overflow-hidden">
+                                <img alt={p.name} className="w-full h-full object-cover" src={p.image ?? ''} />
+                            </div>
+                            <span className="text-sm font-semibold">{p.name}</span>
                         </div>
-                        <span className="text-sm font-semibold">{p.name}</span>
-                    </div>
-                </td>
-                <td className="px-6 py-4 text-sm text-gray-500">{p.category ?? '—'}</td>
-                <td className="px-6 py-4 text-sm font-bold">{p.price}</td>
-                <td className="px-6 py-4">
-                    <span className={`px-2 py-1 rounded text-xs font-bold ${p.stock > 5 ? 'bg-green-100 text-green-700 ' : p.stock > 0 ? 'bg-orange-100  text-orange-700 ' : 'bg-red-100  text-red-700 '}`}>
-                        {p.stock > 5 ? 'En stock' : p.stock > 0 ? 'Stock faible' : 'Rupture'}
-                    </span>
-                </td>
-                <td className="px-6 py-4">
-                    <div className="flex justify-end">
-                        <Link href={`/admin/produits/${p.id}`} className="text-primary hover:text-primary/80">
-                            <FilePenLine />
-                        </Link>
-                    </div>
-                </td>
-            </tr>
-        ));
+                    </td>
+                    <td className="px-6 py-4 text-sm text-gray-500">{(p as any).category ?? '—'}</td>
+                    <td className="px-6 py-4 text-sm font-bold">{typeof p.price === 'number' ? `${p.price.toFixed(2)} €` : p.price}</td>
+                    <td className="px-6 py-4">
+                        <span className={`px-2 py-1 rounded text-xs font-bold ${quantity > 5 ? 'bg-green-100 text-green-700 ' : quantity > 0 ? 'bg-orange-100  text-orange-700 ' : 'bg-red-100  text-red-700 '}`}>
+                            {quantity > 5 ? 'En stock' : quantity > 0 ? 'Stock faible' : 'Rupture'}
+                        </span>
+                    </td>
+                    <td className="px-6 py-4">
+                        <div className="flex justify-end">
+                            <Link href={`/admin/produits/${p.id}`} className="text-primary hover:text-primary/80">
+                                <FilePenLine />
+                            </Link>
+                        </div>
+                    </td>
+                </tr>
+            );
+        });
     };
 
     return (

@@ -4,10 +4,11 @@ import { cn } from "@/lib/utils";
 export interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
     label?: string;
     error?: string;
+    rows?: number;
 }
 
 const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
-    ({ className, label, error, id, ...props }, ref) => {
+    ({ className, label, error, id, rows = 4, ...props }, ref) => {
         return (
             <div className="flex flex-col gap-2">
                 {label && (
@@ -19,10 +20,11 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
                     </label>
                 )}
                 <textarea
+                    rows={rows}
                     ref={ref}
                     id={id}
                     className={cn(
-                        "w-full rounded-lg border border-border-light bg-white min-h-[160px] p-4",
+                        "w-full rounded-lg border border-border-light bg-white p-4",
                         "text-base text-text-main placeholder:text-text-muted/50",
                         "focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary",
                         "transition-all duration-200 resize-y",

@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  cacheComponents: true,
   // ajoute la source pr les image https://images.unsplash.com
   images: {
     // Allow the images.unsplash.com hostname for next/image

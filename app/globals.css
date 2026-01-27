@@ -42,9 +42,6 @@ body {
   @apply bg-background-light text-text-main font-sans antialiased;
 }
 
-/* ===== TYPOGRAPHY ===== */
-
-
 /* ===== UTILITIES ===== */
 
 .text-balance {

@@ -1,3 +1,5 @@
+
+import { Suspense } from "react";
 import { Metadata } from "next";
 import { Leaf, Award, Truck } from "lucide-react";
 import { PageHeader } from "@/components/sections/PageHeader";
@@ -5,6 +7,7 @@ import { ProductCard } from "@/components/cards/ProductCard";
 import { FeatureCard } from "@/components/cards/FeatureCard";
 import { CTASection } from "@/components/sections/CTASection";
 import { products } from "@/lib/data/products";
+import LoadingNosMiels from "./loading";
 
 export const metadata: Metadata = {
     title: "Nos Miels",
@@ -72,12 +75,13 @@ export default function NosMielsPage() {
                             <span className="font-bold text-text-main">{products.length}</span> miels disponibles
                         </p>
                     </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {products.map((product) => (
-                            <ProductCard key={product.id} product={product} />
-                        ))}
-                    </div>
+                    <Suspense fallback={<LoadingNosMiels />}>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {products.map((product) => (
+                                <ProductCard key={product.id} product={product} />
+                            ))}
+                        </div>
+                    </Suspense>
                 </div>
             </section>
 

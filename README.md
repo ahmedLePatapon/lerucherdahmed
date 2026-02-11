@@ -1,36 +1,125 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🐝 Le Rucher d'Ahmed
 
-## Getting Started
+Site web officiel du **Rucher d'Ahmed** — Miels artisanaux récoltés avec soin en Charente, directement du producteur.
 
-First, run the development server:
+## 📖 À propos du projet
+
+Application web Next.js présentant notre exploitation apicole, nos miels artisanaux et notre approche durable de l'apiculture. Le site permet aux visiteurs de découvrir nos produits, nos ruchers et notre histoire.
+
+## ✨ Fonctionnalités principales
+
+- **Catalogue de miels** : Présentation détaillée de nos différents miels (acacia, châtaignier, toutes fleurs, etc.)
+- **Nos ruchers** : Découverte de nos emplacements et terroirs en Charente
+- **Notre apiculture** : Explication de nos pratiques apicoles responsables
+- **Histoire & rencontres** : Présentation de notre parcours et nos valeurs
+- **Interface d'administration** : Gestion des produits et commandes
+- **Design responsive** : Optimisé pour tous les appareils
+
+## 🛠️ Technologies utilisées
+
+- **Framework** : [Next.js 16](https://nextjs.org/) (App Router)
+- **Language** : TypeScript
+- **Styling** : [Tailwind CSS v4](https://tailwindcss.com/)
+- **UI Components** : 
+  - Lucide React (icônes)
+  - clsx & tailwind-merge (gestion des classes)
+- **React** : Version 19.2.3
+
+## 🚀 Installation et démarrage
+
+### Prérequis
+- Node.js 20+
+- npm, yarn, pnpm ou bun
+
+### Installation
+
+```bash
+# Cloner le repository
+git clone https://github.com/ahmedLePatapon/lerucherdahmed.git
+
+# Se déplacer dans le dossier
+cd lerucherdahmed
+
+# Installer les dépendances
+npm install
+```
+
+### Lancement en développement
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvrir [http://localhost:3000](http://localhost:3000) dans votre navigateur.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build de production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## 📁 Structure du projet
 
-To learn more about Next.js, take a look at the following resources:
+```
+lerucherdahmed/
+├── app/                      # Routes Next.js (App Router)
+│   ├── (public)/            # Pages publiques
+│   │   ├── page.tsx         # Page d'accueil
+│   │   ├── nos-miels/       # Catalogue de miels
+│   │   ├── nos-ruchers/     # Présentation des ruchers
+│   │   ├── notre-apiculture/ # Nos pratiques apicoles
+│   │   ├── a-propos/        # À propos
+│   │   └── rencontre/       # Pages de rencontres
+│   └── admin/               # Interface d'administration
+├── components/              # Composants React réutilisables
+│   ├── sections/           # Sections de page (Hero, Features, etc.)
+│   ├── cards/              # Cartes de contenu
+│   └── admin/              # Composants d'administration
+├── lib/                     # Utilitaires et données
+│   ├── data/               # Données statiques (miels, ruchers, etc.)
+│   └── auth.ts             # Authentification
+├── design/                  # Prototypes HTML statiques
+├── public/                  # Assets statiques
+└── plans/                   # Documentation et plans
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎨 Design
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Le design utilise une palette de couleurs naturelles et chaleureuses :
+- **Primaire** : Tons ambrés (miel)
+- **Secondaire** : Turquoise doux
+- **Typographie** : Plus Jakarta Sans (corps) et Playfair Display (titres)
 
-## Deploy on Vercel
+Les prototypes HTML statiques sont disponibles dans le dossier `/design`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🌍 Pages principales
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `/` - Accueil
+- `/nos-miels` - Catalogue de nos miels
+- `/nos-ruchers` - Présentation de nos ruchers et terroirs
+- `/notre-apiculture` - Nos méthodes et pratiques
+- `/a-propos` - Notre histoire
+- `/contact` - Nous contacter
+- `/admin` - Interface d'administration (protégée)
+
+## 🔧 Scripts disponibles
+
+```bash
+npm run dev      # Serveur de développement
+npm run build    # Build de production
+npm start        # Lancer en production
+npm run lint     # Vérifier le code avec ESLint
+```
+
+## 📝 License
+
+Ce projet est privé et appartient au Rucher d'Ahmed.
+
+## 📧 Contact
+
+Pour toute question : [Le Rucher d'Ahmed](https://lerucherdahmed.fr)
+
+---
+
+Fait avec 🐝 et 🍯 en Charente
